@@ -12,8 +12,6 @@ export class BrothersService {
 
   brothersRef: AngularFireList<Brother>;
 
-  brothers: Brother[] = [];
-
   constructor(private db: AngularFireDatabase) { 
     this.brothersRef = db.list(this.dbpath);
   }

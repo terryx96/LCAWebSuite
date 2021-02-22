@@ -10,6 +10,8 @@ export class DataService {
 
   tableRef: AngularFireList<any>;
 
+  entries: any[] = [];
+
   constructor(protected db: AngularFireDatabase) { 
     this.tableRef = db.list(this.dbpath);
   }
@@ -19,6 +21,8 @@ export class DataService {
   }
 
   getAll() {
+    console.log(this.tableRef)
+    console.log(this.dbpath);
     return this.db.list(this.dbpath).valueChanges();
   }
 

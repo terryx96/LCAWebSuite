@@ -14,12 +14,10 @@ export class HomeComponent implements OnInit {
 
   blogposts: any[] = [];
 
-  constructor(private dataService: DataService){
-    this.dataService.setDbPath("/brothers");
-  }
+  constructor(private blogService: BlogService){}
 
   ngOnInit(): void {
-    this.dataService.getAll()
+    this.blogService.getAll()
     .subscribe(blogpost => {
       this.blogposts = blogpost;
     });
@@ -27,7 +25,7 @@ export class HomeComponent implements OnInit {
   }
 
   saveBlogpost(): void {
-    this.dataService.create(this.blogpost).then(() => {
+    this.blogService.create(this.blogpost).then(() => {
       console.log("new blog post created successfully");
     });
   }
