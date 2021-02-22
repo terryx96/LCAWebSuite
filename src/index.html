@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LCAValpo</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <script>
+  //Change font size with id "text"
+	function changeFontSize(id, increaseFactor){
+		 txt = document.getElementById('text');
+		 style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+		 currentSize = parseFloat(style);
+		 txt.style.fontSize = increaseFactor+'%';
+		 //txt.style.fontSize = (currentSize + increaseFactor) + 'px';
+	}
+  //Change color set (colorblind)
+  	function changeColorSet(){
+		var checkBox = document.getElementById("myCheck");
+		if (checkBox.checked == true){
+			document.body.style.backgroundColor = "red";
+			txt = document.getElementById('text');
+				txt.style.color="blue";
+		} else {
+			document.body.style.backgroundColor = "";
+			txt = document.getElementById('text');
+				txt.style.color="";
+		}
+	}
+</script>
+  <app-root></app-root>
+</body>
+</html>
+

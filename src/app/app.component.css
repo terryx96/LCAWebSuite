@@ -1,0 +1,21 @@
+ul.a {
+  list-style-position: inside;
+}
+p {
+  color: blue;
+  text-indent: 30px;
+  text-transform: uppercase;
+}
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+body {
+  margin-left: 100px;
+  margin-right: 100px;
+}
