@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import Entry from '../models/entry';
 import Newsletter from '../models/newsletter';
 import { DataService } from '../services/data/data.service';
 
@@ -11,9 +10,7 @@ import { DataService } from '../services/data/data.service';
 export class NewsletterComponent implements OnInit {
 
   newsletter: Newsletter = new Newsletter();
-
   newsletters: Newsletter[] = [];
-
   dbpath: string = "/newsletter";
 
   constructor(private dataService: DataService) {

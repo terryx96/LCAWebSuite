@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Brother from '../models/brother';
-import { BrothersService } from '../services/brothers/brothers.service';
-
+import { DataService } from '../services/data/data.service';
 
 @Component({
   selector: 'app-brothers',
@@ -11,23 +10,28 @@ import { BrothersService } from '../services/brothers/brothers.service';
 export class BrothersComponent implements OnInit {
 
   brother: Brother = new Brother();
+  brothers: Brother[] = [];
+  dbpath: string = "/brothers";
 
-  brothers: any[] = [];
-
-  constructor(private brotherService: BrothersService) {}
+  constructor(private dataService: DataService) {
+    this.dataService.setDbPath(this.dbpath);
+  }
 
   ngOnInit(): void {
-    this.brotherService.getAll()
-      .subscribe(brothers => {
-        this.brothers = brothers;
-        console.log(this.brothers)
+    this.dataService.getAll()
+      .subscribe((brothers: any[]) => {
+        this.setBrothers(brothers);
       });
   }
 
   saveBrother(): void {
-    this.brotherService.create(this.brother).then(() => {
+    this.dataService.create(this.brother).then(() => {
       console.log("new brother successfully created");
     });
+  }
+
+  setBrothers(brothers: Brother[]) {
+    this.brothers = brothers;
   }
 
 }
