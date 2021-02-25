@@ -17,16 +17,24 @@ export class DataService {
     this.tableRef = db.list(this.dbpath);
   }
 
-  setDbPath(path: string) {
-    this.dbpath = path;
-  }
-
-  getAll() {
+  getAll(): any {
     return this.db.list(this.dbpath).valueChanges();
   }
 
   create(entry: Entry) {
     return this.tableRef.push(entry);
+  }
+
+  getDbPath(): string {
+    return this.dbpath;
+  }
+
+  setEntries(entries: any[]): void {
+    this.entries = entries;
+  }
+
+  setDbPath(path: string): void {
+    this.dbpath = path;
   }
 
 }

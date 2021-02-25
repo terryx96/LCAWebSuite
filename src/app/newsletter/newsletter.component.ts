@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import Entry from '../models/entry';
 import Newsletter from '../models/newsletter';
-import { NewsletterService } from '../services/newsletter/newsletter.service';
+import { DataService } from '../services/data/data.service';
 
 @Component({
   selector: 'app-newsletter',
@@ -13,20 +14,27 @@ export class NewsletterComponent implements OnInit {
 
   newsletters: Newsletter[] = [];
 
-  constructor(private newsletterService: NewsletterService) {}
+  dbpath: string = "/newsletter";
+
+  constructor(private dataService: DataService) {
+    this.dataService.setDbPath(this.dbpath);
+  }
 
   ngOnInit(): void {
-    this.newsletterService.getAll()
-      .subscribe(newsletters => {
-        this.newsletters = newsletters;
-        console.log(this.newsletters);
+    this.dataService.getAll()
+      .subscribe((newsletters: any[]) => {
+        this.setNewsletters(newsletters);
       });
   }
 
   saveNewsletter(): void {
-    this.newsletterService.create(this.newsletter).then(() => {
+    this.dataService.create(this.newsletter).then(() => {
       console.log("newsletter successfully created");
     })
+  }
+
+  setNewsletters(newsletters: Newsletter[]) {
+    this.newsletters = newsletters;
   }
 
 }
