@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import Blogpost from '../models/blogpost';
-import { BlogService } from '../services/blog/blog.service';
 import { DataService } from '../services/data/data.service';
 
 @Component({
@@ -11,23 +10,28 @@ import { DataService } from '../services/data/data.service';
 export class HomeComponent implements OnInit {
 
   blogpost: Blogpost = new Blogpost();
-
   blogposts: any[] = [];
+  dbpath: string = "/blogpost";
 
-  constructor(private blogService: BlogService){}
+  constructor(private dataService: DataService) {
+    this.dataService.setDbPath(this.dbpath);
+  }
 
   ngOnInit(): void {
-    this.blogService.getAll()
-    .subscribe(blogpost => {
-      this.blogposts = blogpost;
+    this.dataService.getAll()
+    .subscribe((blogposts: any) => {
+      this.setBlogposts(blogposts);
     });
-    console.log("nice" + this.blogposts)
   }
 
   saveBlogpost(): void {
-    this.blogService.create(this.blogpost).then(() => {
+    this.dataService.create(this.blogpost).then(() => {
       console.log("new blog post created successfully");
     });
+  }
+
+  setBlogposts(blogposts: Blogpost[]){
+    this.blogposts = blogposts;
   }
 
 
