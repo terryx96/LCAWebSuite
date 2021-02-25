@@ -23,14 +23,12 @@ export class AppComponent {
 	googleCalendarApiKey: environment.calendarConfig.apiKey,
 	plugins: [ googleCalendarPlugin, dayGridPlugin, timeGridPlugin, listGridPlugin ],
 	initialView: 'listWeek',
-	height: '400px',
-	aspectRatio: 0.5,
+	height: '600px',	
 	
 	events: {
 		googleCalendarId: environment.calendarConfig.calendarID,
 		color: 'purple',   // an option!
 		textColor: '#ffffff', // an option!
-		
 		className: 'my-event-1',
 	},
 	

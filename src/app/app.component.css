@@ -19,3 +19,18 @@ body {
   margin-left: 100px;
   margin-right: 100px;
 }
+
+.calendar {
+  margin-left: 80em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.fc-prev-button .fc-button .fc-button-primary, .fc-prev-button .fc-button .fc-button-primary {
+  background-color: white;
+  background-image: none;
+}
+
+.fc-toolbar-title {
+  color: white;
+}

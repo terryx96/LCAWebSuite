@@ -1,19 +1,6 @@
 <head>
 	<title>Page Title</title>
-	<script src='../fullcalendar/core/main.js'></script>
-	</head>
-
-	<!--  Full Calendar npm installations
-		npm install 
-	@fullcalendar/core@5.5.0
-	@fullcalendar/interaction@5.5.0
-	@fullcalendar/daygrid@5.5.0
-	@fullcalendar/timegrid@5.5.0
-	@fullcalendar/list@5.5.0	 
-	@fullcalendar/google-calendar@5.5.0
- -->
-	
-	
+</head>
 	
 	<body>
 	<h1>LCA WebPage</h1>
@@ -30,9 +17,11 @@
 			<li><a class="button" routerLink="/brothers">Brothers</a></li>
 		</ul>
 	</nav>
+	<div class="calendar">
+		<!-- Calendar -->
+		<full-calendar [options]="calendarOptions"></full-calendar>
+	</div>
 	
-	<!-- Calendar -->
-	<full-calendar [options]="calendarOptions"></full-calendar>
 	
 	<!-- <div id='calendar'></div>
 	
