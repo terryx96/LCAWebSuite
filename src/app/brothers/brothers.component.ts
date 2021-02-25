@@ -26,7 +26,7 @@ export class BrothersComponent implements OnInit {
 
   saveBrother(): void {
     this.brotherService.create(this.brother).then(() => {
-      console.log("new brother successfully created")
+      console.log("new brother successfully created");
     });
   }
 

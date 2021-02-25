@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import Newsletter from '../models/newsletter';
+import { NewsletterService } from '../services/newsletter/newsletter.service';
 
 @Component({
   selector: 'app-newsletter',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsletterComponent implements OnInit {
 
-  constructor() { }
+  newsletter: Newsletter = new Newsletter();
+
+  newsletters: Newsletter[] = [];
+
+  constructor(private newsletterService: NewsletterService) {}
 
   ngOnInit(): void {
+    this.newsletterService.getAll()
+      .subscribe(newsletters => {
+        this.newsletters = newsletters;
+        console.log(this.newsletters);
+      });
+  }
+
+  saveNewsletter(): void {
+    this.newsletterService.create(this.newsletter).then(() => {
+      console.log("newsletter successfully created");
+    })
   }
 
 }
