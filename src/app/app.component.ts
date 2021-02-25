@@ -5,6 +5,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin
 import timeGridPlugin from '@fullcalendar/timegrid'; // a plugin
 import listGridPlugin from '@fullcalendar/list'; // a plugin
 import interactionPlugin from '@fullcalendar/interaction'; // a plugin
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -19,14 +20,14 @@ export class AppComponent {
 
   calendarOptions: CalendarOptions = {
 	// Single Calendar
-	googleCalendarApiKey: '',
+	googleCalendarApiKey: environment.calendarConfig.apiKey,
 	plugins: [ googleCalendarPlugin, dayGridPlugin, timeGridPlugin, listGridPlugin ],
 	initialView: 'listWeek',
 	height: '400px',
 	aspectRatio: 0.5,
 	
 	events: {
-		googleCalendarId: '',
+		googleCalendarId: environment.calendarConfig.calendarID,
 		color: 'purple',   // an option!
 		textColor: '#ffffff', // an option!
 		
