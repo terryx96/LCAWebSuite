@@ -1,4 +1,6 @@
-export default class Brother {
+import Entry from './entry';
+
+export default class Brother extends Entry {
     name?: string;
     isnum?: number;
     year?: string;
