@@ -1,6 +1,9 @@
-p {
-	font-size: 100px;
-}
 html{
 	background-color: gray;
+}
+p {
+  font-size: 125%;
+}
+h1{
+    font-size: 250%;
 }
