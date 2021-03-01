@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import Entry from '../../models/entry';
 
 @Injectable({
   providedIn: 'root'
@@ -8,26 +9,32 @@ export class DataService {
 
   protected dbpath: string = "/";
 
-  tableRef: AngularFireList<any>;
+  tableRef: AngularFireList<Entry>;
 
-  entries: any[] = [];
+  entries: Entry[] = [];
 
   constructor(protected db: AngularFireDatabase) { 
     this.tableRef = db.list(this.dbpath);
   }
 
-  setDbPath(path: string) {
-    this.dbpath = path;
-  }
-
-  getAll() {
-    console.log(this.tableRef)
-    console.log(this.dbpath);
+  getAll(): any {
     return this.db.list(this.dbpath).valueChanges();
   }
 
-  create(entry: any) {
+  create(entry: Entry) {
     return this.tableRef.push(entry);
+  }
+
+  getDbPath(): string {
+    return this.dbpath;
+  }
+
+  setEntries(entries: any[]): void {
+    this.entries = entries;
+  }
+
+  setDbPath(path: string): void {
+    this.dbpath = path;
   }
 
 }
