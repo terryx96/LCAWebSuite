@@ -21,7 +21,8 @@ body {
 }
 
 .calendar {
-  margin-left: 80em;
+  margin-left: 300px;
+  margin-right: 500px;
   margin-top: 15px;
   margin-bottom: 15px;
 }
