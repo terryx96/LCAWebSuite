@@ -1,7 +1,78 @@
-<p>brothers works!</p>
 
-<ul>
-    <li *ngFor = "let brother of brothers">
-        {{ brother }}
-    </li>
-</ul>
+<fieldset>
+	<div>
+		<label for = "name">Name</label>
+		<input
+			type = "text"
+			class = "form-control"
+			id = "name"
+			[(ngModel)] = "brother.name"
+			name = "name"
+		/>
+		<label for = "isnum">Iota Sigma Number</label>
+		<input
+			type = "text"
+			class = "form-control"
+			id = "isnum"
+			[(ngModel)] = "brother.isnum"
+			name = "isnum"
+		/>
+		<label for = "year">Graduation Year</label>
+		<input
+			type = "text"
+			class = "form-control"
+			id = "year"
+			[(ngModel)] = "brother.year"
+			name = "year"
+		/>
+		<label for = "majors">Majors</label>
+		<input
+			type = "text"
+			class = "form-control"
+			id = "majors"
+			[(ngModel)] = "brother.majors"
+			name = "majors"
+		/>
+		<label for = "minors">Minors</label>
+		<input
+			type = "text"
+			class = "form-control"
+			id = "minors"
+			[(ngModel)] = "brother.minors"
+			name = "minors"
+		/>
+		<label for = "zeta">Officer Position</label>
+		<input
+			type = "text"
+			class = "form-control"
+			id = "zeta"
+			[(ngModel)] = "brother.zeta"
+			name = "zeta"
+		/>
+		<button (click) = "saveBrother()">Submit</button>
+	</div>
+
+	<ul>
+		<div *ngFor = "let brother of brothers">
+			<div>
+				<h5>Name: {{brother.name}}</h5>
+				<h5>Iota Sigma Number: {{brother.isnum}}</h5>
+				<h5>Graduation Year: {{brother.year}}</h5>
+				<h5>Major(s): {{brother.majors}}</h5>
+				<h5>Minor(s): {{brother.minors}}</h5>
+				<h5>Officer Position: {{brother.zeta}}</h5>
+			</div>
+		</div>
+	</ul>
+</fieldset>
+
+<fieldset>
+	<legend>
+		<button type="button" class="add"> Edit </button>
+		<button type="button" class="add"> Remove </button>
+	</legend>
+	<div>
+		<h1>Title</h1>
+		<p>Hi</p>
+	</div>
+</fieldset>

@@ -26,11 +26,12 @@ body {
   margin-bottom: 15px;
 }
 
-.fc-prev-button .fc-button .fc-button-primary, .fc-prev-button .fc-button .fc-button-primary {
-  background-color: white;
-  background-image: none;
+.fc .fc-toolbar-title {
+  font-size: 1.75em;
+  margin: 0;
+  text-decoration-color: green;
 }
 
-.fc-toolbar-title {
-  color: white;
+.fc .fc-button-primary {
+  background-color: #ffffff;
 }
