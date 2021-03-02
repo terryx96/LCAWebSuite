@@ -15,6 +15,7 @@ export class DataService {
 
   constructor(protected db: AngularFireDatabase) { 
     this.tableRef = db.list(this.dbpath);
+    console.log(this.tableRef); 
   }
 
   getAll(): any {
@@ -22,6 +23,7 @@ export class DataService {
   }
 
   create(entry: Entry) {
+    console.log(this.dbpath);
     return this.tableRef.push(entry);
   }
 
@@ -35,6 +37,7 @@ export class DataService {
 
   setDbPath(path: string): void {
     this.dbpath = path;
+    this.tableRef = this.db.list(this.dbpath);
   }
 
 }
