@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { AuthenticationService } from '../app/services/auth/authentication.service';
 
 //Calendar Stuff
 import { FullCalendarModule } from '@fullcalendar/angular'; // the main connector. must go first
@@ -17,13 +18,16 @@ import { ScholarshipComponent } from './scholarship/scholarship.component';
 import { InterestComponent } from './interest/interest.component';
 import { PhilanthropyComponent } from './philanthropy/philanthropy.component';
 import { BrothersComponent } from './brothers/brothers.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { AdminComponent } from './admin/admin.component';
 import { FormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import { environment } from '../environments/environment';
-
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AuthenticationGuard } from './services/auth/authentication.guard';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,9 @@ import { environment } from '../environments/environment';
     ScholarshipComponent,
     InterestComponent,
     PhilanthropyComponent,
-    BrothersComponent
+    BrothersComponent,
+    SignInComponent,
+    AdminComponent
   ],
   imports: [
   BrowserModule,
@@ -51,13 +57,15 @@ import { environment } from '../environments/environment';
 	  {path: 'scholarship', component: ScholarshipComponent},
 	  {path: 'interest', component: InterestComponent},
 	  {path: 'philanthropy', component: PhilanthropyComponent},
-	  {path: 'brothers', component: BrothersComponent}
+	  {path: 'brothers', component: BrothersComponent},
+    {path: 'sign-in', component: SignInComponent},
+    {path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard]}
   ]),
   AngularFireModule.initializeApp(environment.firebaseConfig),
   AngularFireDatabaseModule,
   AngularFireStorageModule
 ],
-  providers: [],
+  providers: [AuthenticationService, AuthenticationGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
