@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import Newsletter from '../models/newsletter';
 import { DataService } from '../services/data/data.service';
+import { FileService } from '../services/file/file.service';
+import { FileUpload } from '../services/file/FileUpload';
 
 @Component({
   selector: 'app-newsletter',
@@ -10,33 +12,33 @@ import { DataService } from '../services/data/data.service';
 })
 export class NewsletterComponent implements OnInit {
 
+  percentage: number | undefined;
+  fileUpload: FileUpload | undefined;
   newsletter: Newsletter = new Newsletter();
   newsletters: Newsletter[] = [];
   dbpath: string = "/newsletter";
   filePath: string = "";
 
-  constructor(private dataService: DataService, private afStorage: AngularFireStorage) {
-    this.dataService.setDbPath(this.dbpath);
+  constructor(private fileService: FileService, private afStorage: AngularFireStorage) {
   }
 
   ngOnInit(): void {
-    this.dataService.getAll().valueChanges()
-      .subscribe((newsletters: any[]) => {
-        this.setNewsletters(newsletters);
-      });
+    
   }
 
   upload(event: any) {    
     const file = event.target.files[0]
-    const filepath = file.name;
-    const ref = this.afStorage.ref(filepath);
-    const task = ref.put(file);
+    this.fileUpload = new FileUpload(file);
+
+    this.fileService.upload(this.fileUpload).subscribe(
+      (percentage: any) => {
+        this.percentage = Math.round(percentage)
+      }
+    )
   }
 
   saveNewsletter(): void {
-    this.dataService.create(this.newsletter).then(() => {
-      console.log("newsletter successfully created");
-    })
+
   }
 
   setNewsletters(newsletters: Newsletter[]) {
