@@ -27,6 +27,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthenticationGuard } from './services/auth/authentication.guard';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+
 
 @NgModule({
   declarations: [
@@ -62,7 +64,8 @@ import { AuthenticationGuard } from './services/auth/authentication.guard';
   ]),
   AngularFireModule.initializeApp(environment.firebaseConfig),
   AngularFireDatabaseModule,
-  AngularFireAuthModule
+  AngularFireAuthModule,
+  MDBBootstrapModule.forRoot()
 ],
   providers: [AuthenticationService, AuthenticationGuard],
   bootstrap: [AppComponent]

@@ -12,6 +12,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.1.0",
+    "@angular/cdk": "^11.2.8",
     "@angular/common": "~11.1.0",
     "@angular/compiler": "~11.1.0",
     "@angular/core": "~11.1.0",
@@ -27,6 +28,7 @@
     "@fullcalendar/interaction": "^5.5.0",
     "@fullcalendar/list": "^5.5.0",
     "@fullcalendar/timegrid": "^5.5.0",
+    "angular-bootstrap-md": "^11.0.0",
     "angularfire2": "^5.4.2",
     "firebase": "^8.2.5",
     "rxjs": "~6.6.0",
