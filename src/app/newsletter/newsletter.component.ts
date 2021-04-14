@@ -29,16 +29,7 @@ export class NewsletterComponent implements OnInit {
   upload(event: any) {    
     const file = event.target.files[0]
     this.fileUpload = new FileUpload(file);
-
-    this.fileService.upload(this.fileUpload).subscribe(
-      (percentage: any) => {
-        this.percentage = Math.round(percentage)
-      }
-    )
-  }
-
-  saveNewsletter(): void {
-
+    this.fileService.upload(this.fileUpload);
   }
 
   setNewsletters(newsletters: Newsletter[]) {

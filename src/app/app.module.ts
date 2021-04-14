@@ -70,7 +70,6 @@ import { AddBrotherComponent } from './add-brother/add-brother.component';
   AngularFireDatabaseModule,
   AngularFireAuthModule,
   MDBBootstrapModule.forRoot(),
-  AngularFireStorageModule
   AngularFireStorageModule,
   FormsModule
 ],
