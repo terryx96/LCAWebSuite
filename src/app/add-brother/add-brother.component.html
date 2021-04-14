@@ -1,0 +1,51 @@
+<div>
+    <label for = "name">Name</label>
+    <input
+        type = "text"
+        class = "form-control"
+        id = "name"
+        [(ngModel)] = "brother.name"
+        name = "name"
+    />
+    <label for = "isnum">Iota Sigma Number</label>
+    <input
+        type = "text"
+        class = "form-control"
+        id = "isnum"
+        [(ngModel)] = "brother.isnum"
+        name = "isnum"
+    />
+    <label for = "year">Graduation Year</label>
+    <input
+        type = "text"
+        class = "form-control"
+        id = "year"
+        [(ngModel)] = "brother.year"
+        name = "year"
+    />
+    <label for = "majors">Majors</label>
+    <input
+        type = "text"
+        class = "form-control"
+        id = "majors"
+        [(ngModel)] = "brother.majors"
+        name = "majors"
+    />
+    <label for = "minors">Minors</label>
+    <input
+        type = "text"
+        class = "form-control"
+        id = "minors"
+        [(ngModel)] = "brother.minors"
+        name = "minors"
+    />
+    <label for = "zeta">Officer Position</label>
+    <input
+        type = "text"
+        class = "form-control"
+        id = "zeta"
+        [(ngModel)] = "brother.zeta"
+        name = "zeta"
+    />
+    <button (click) = "saveBrother()">Submit</button>
+</div>

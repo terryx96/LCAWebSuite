@@ -30,6 +30,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthenticationGuard } from './services/auth/authentication.guard';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
+import { BrothersListComponent } from './brothers-list/brothers-list.component';
+import { AddBrotherComponent } from './add-brother/add-brother.component';
 
 @NgModule({
   declarations: [
@@ -44,12 +46,13 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     PhilanthropyComponent,
     BrothersComponent,
     SignInComponent,
-    AdminComponent
+    AdminComponent,
+    BrothersListComponent,
+    AddBrotherComponent
   ],
   imports: [
   BrowserModule,
   FullCalendarModule,
-  FormsModule,
   RouterModule.forRoot([
     {path: 'home', component: HomeComponent},
     {path: 'about-us', component: AboutUsComponent},
@@ -68,6 +71,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   AngularFireAuthModule,
   MDBBootstrapModule.forRoot(),
   AngularFireStorageModule
+  AngularFireStorageModule,
+  FormsModule
 ],
   providers: [AuthenticationService, AuthenticationGuard],
   bootstrap: [AppComponent]
