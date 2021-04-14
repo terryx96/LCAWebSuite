@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import Newsletter from '../models/newsletter';
-import { DataService } from '../services/data/data.service';
 import { FileService } from '../services/file/file.service';
 import { FileUpload } from '../services/file/FileUpload';
 
