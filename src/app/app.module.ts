@@ -28,6 +28,8 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthenticationGuard } from './services/auth/authentication.guard';
+import { BrothersListComponent } from './brothers-list/brothers-list.component';
+import { AddBrotherComponent } from './add-brother/add-brother.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { AuthenticationGuard } from './services/auth/authentication.guard';
     PhilanthropyComponent,
     BrothersComponent,
     SignInComponent,
-    AdminComponent
+    AdminComponent,
+    BrothersListComponent,
+    AddBrotherComponent
   ],
   imports: [
   BrowserModule,
