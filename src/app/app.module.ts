@@ -51,7 +51,6 @@ import { AddBrotherComponent } from './add-brother/add-brother.component';
   imports: [
   BrowserModule,
   FullCalendarModule,
-  FormsModule,
   RouterModule.forRoot([
     {path: 'home', component: HomeComponent},
     {path: 'about-us', component: AboutUsComponent},
@@ -67,7 +66,8 @@ import { AddBrotherComponent } from './add-brother/add-brother.component';
   ]),
   AngularFireModule.initializeApp(environment.firebaseConfig),
   AngularFireDatabaseModule,
-  AngularFireStorageModule
+  AngularFireStorageModule,
+  FormsModule
 ],
   providers: [AuthenticationService, AuthenticationGuard],
   bootstrap: [AppComponent]
