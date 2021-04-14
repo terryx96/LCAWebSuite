@@ -19,9 +19,9 @@ import { PhilanthropyComponent } from './philanthropy/philanthropy.component';
 import { BrothersComponent } from './brothers/brothers.component';
 import { FormsModule } from '@angular/forms';
 
-
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import {AngularFireStorageModule} from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 
 
@@ -54,7 +54,8 @@ import { environment } from '../environments/environment';
 	  {path: 'brothers', component: BrothersComponent}
   ]),
   AngularFireModule.initializeApp(environment.firebaseConfig),
-  AngularFireDatabaseModule
+  AngularFireDatabaseModule,
+  AngularFireStorageModule
 ],
   providers: [],
   bootstrap: [AppComponent]
