@@ -24,6 +24,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import {AngularFireStorageModule} from '@angular/fire/storage';
 import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthenticationGuard } from './services/auth/authentication.guard';
@@ -65,7 +66,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   AngularFireModule.initializeApp(environment.firebaseConfig),
   AngularFireDatabaseModule,
   AngularFireAuthModule,
-  MDBBootstrapModule.forRoot()
+  MDBBootstrapModule.forRoot(),
+  AngularFireStorageModule
 ],
   providers: [AuthenticationService, AuthenticationGuard],
   bootstrap: [AppComponent]

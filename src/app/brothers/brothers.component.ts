@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Brother from '../models/brother';
 import { DataService } from '../services/data/data.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-brothers',
@@ -18,16 +19,33 @@ export class BrothersComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.dataService.getAll()
+    console.log(this.dataService.getDbPath())
+    this.dataService.getAll().snapshotChanges().pipe(
+        map((changes: any) => 
+          changes.map((c: any) => 
+            ({ key: c.payload.key, ...c.payload.val() })
+          ))
+      )
       .subscribe((brothers: any[]) => {
         this.setBrothers(brothers);
+      }, (error: any) => {
+        console.log(error)
       });
+
+  }
+
+  getById(id: string) {
+    return this.brothers.filter(brother => {
+      return brother.key == id;
+    })
+  }
+
+  deleteBrother(id: string): void {
+    this.dataService.delete(id);
   }
 
   saveBrother(): void {
-    this.dataService.create(this.brother).then(() => {
-      console.log("new brother successfully created");
-    });
+    this.dataService.create(this.brother);
   }
 
   setBrothers(brothers: Brother[]) {

@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.dataService.getAll()
+    this.dataService.getAll().valueChanges()
     .subscribe((blogposts: any) => {
       this.setBlogposts(blogposts);
     });

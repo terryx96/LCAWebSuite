@@ -17,12 +17,16 @@ export class DataService {
     this.tableRef = db.list(this.dbpath);
   }
 
-  getAll(): any {
-    return this.db.list(this.dbpath).valueChanges();
+  getAll(): AngularFireList<Entry> {
+    return this.tableRef;
   }
 
   create(entry: Entry) {
     return this.tableRef.push(entry);
+  }
+
+  getById(id: string) {
+    return this.db.object(`${this.dbpath}/${id}`)
   }
 
   getDbPath(): string {
@@ -35,6 +39,11 @@ export class DataService {
 
   setDbPath(path: string): void {
     this.dbpath = path;
+    this.tableRef = this.db.list(this.dbpath);
+  }
+
+  delete(id: string) {
+    this.tableRef.remove(id);
   }
 
 }
