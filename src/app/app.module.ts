@@ -25,6 +25,8 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AuthenticationGuard } from './services/auth/authentication.guard';
 
 @NgModule({
   declarations: [
@@ -56,12 +58,13 @@ import { environment } from '../environments/environment';
 	  {path: 'philanthropy', component: PhilanthropyComponent},
 	  {path: 'brothers', component: BrothersComponent},
     {path: 'sign-in', component: SignInComponent},
-    {path: 'admin', component: AdminComponent}
+    {path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard]}
   ]),
   AngularFireModule.initializeApp(environment.firebaseConfig),
-  AngularFireDatabaseModule
+  AngularFireDatabaseModule,
+  AngularFireAuthModule
 ],
-  providers: [],
+  providers: [AuthenticationService, AuthenticationGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

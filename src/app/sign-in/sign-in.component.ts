@@ -20,10 +20,14 @@ export class SignInComponent implements OnInit {
 
   onLoginEmail(): void {
   this.authService.loginWithEmail(this.email, this.password)
-        .then(() => this.router.navigate(['/admin']))
+        .then(() => {
+          this.router.navigate(['/admin']);
+          console.log("Sign in successful");
+        })
         .catch(_error => {
           this.error = _error
-          this.router.navigate(['/sign-in'])
+          console.log("Error returning you to sign-in");
+          this.router.navigate(['/sign-in']);
         })
   }
 }
