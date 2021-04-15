@@ -18,18 +18,17 @@ export class FileService {
     const storageRef = this.storage.ref(filePath);
     const uploadTask = this.storage.upload(filePath, fileUpload.file);
 
-    uploadTask.snapshotChanges().pipe(
-      finalize(() => {
-        storageRef.getDownloadURL().subscribe((downloadURL: string) => {
-          fileUpload.url = downloadURL;
-          fileUpload.name = fileUpload.file.name;
-          this.saveFileData(fileUpload);
-        })
-      })
-    )
+    storageRef.getDownloadURL().subscribe((downloadURL) => {
+      fileUpload.url = downloadURL;
+      fileUpload.name = fileUpload.file.name;
+      this.saveFileData(fileUpload);
+    })
+
+    return uploadTask.percentageChanges();
   }
   
   private saveFileData(fileUpload: FileUpload): void {
+    console.log(fileUpload)
     this.db.list(this.basePath).push(fileUpload);
   }
 
