@@ -4,6 +4,23 @@ button.add {
     border: 2px solid #4CAF50; /* Green */
 }
 
+.container {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+
+.studImg {
+  height: auto;
+  padding: 1px;
+  width: 70%;
+}
+
+.coatImg {
+  height: auto;
+  padding: 1px;
+  width: 60%;
+}
+
 fieldset {
   display: block;
   margin-left: 2px;
