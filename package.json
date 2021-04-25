@@ -30,7 +30,10 @@
     "@fullcalendar/timegrid": "^5.5.0",
     "angular-bootstrap-md": "^11.0.0",
     "angularfire2": "^5.4.2",
+    "bootstrap": "^4.6.0",
     "firebase": "^8.2.5",
+    "jquery": "^3.6.0",
+    "ng2-pdf-viewer": "^6.4.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

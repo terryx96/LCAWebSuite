@@ -17,6 +17,7 @@ export class NewsletterComponent implements OnInit {
   newsletter: Newsletter = new Newsletter();
   newsletters: Newsletter[] = [];
   dbpath: string = "/newsletter";
+  pdfSrc: string = "gs://lcavu-5d8db.appspot.com/uploads/MATH 321 HW8.pdf";
 
   constructor(private fileService: FileService,
               private dataService: DataService,
