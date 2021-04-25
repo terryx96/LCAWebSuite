@@ -14,6 +14,7 @@ export class AddBlogpostComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
+    this.dataService.setDbPath("/blogpost")
   }
 
   saveBlogpost(): void {
