@@ -34,6 +34,7 @@ import { BrothersListComponent } from './brothers-list/brothers-list.component';
 import { AddBrotherComponent } from './add-brother/add-brother.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ImageComponentComponent } from './image-component/image-component.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -51,13 +52,14 @@ import { ImageComponentComponent } from './image-component/image-component.compo
     AdminComponent,
     BrothersListComponent,
     AddBrotherComponent,
-    ImageComponentComponent
+    ImageComponentComponent,
+    NavbarComponent
   ],
   imports: [
   BrowserModule,
   FullCalendarModule,
   RouterModule.forRoot([
-    {path: 'home', component: HomeComponent},
+    {path: '', component: HomeComponent},
     {path: 'about-us', component: AboutUsComponent},
 	  {path: 'gallery', component: GalleryComponent},
 	  {path: 'newsletter', component: NewsletterComponent},

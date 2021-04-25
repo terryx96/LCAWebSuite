@@ -14,3 +14,7 @@ fieldset {
   padding-right: 0.75em;
   border: 1px dotted;
 }
+
+.container {
+  padding-top: 8em;
+}

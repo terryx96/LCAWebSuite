@@ -1,31 +1,36 @@
-<head>
-	<title>Page Title</title>
-</head>
-	
+<html>
+	<head>
+		<title>Page Title</title>
+	</head>
+		
 	<body>
-	<h1>LCA WebPage</h1>
-	<nav>
-		<ul class = "a">
-			<li><a class="button" routerLink="/home">Home</a></li>
-			<li><a class="button" routerLink="/about-us">About Us</a></li>
-			<li><a class="button" routerLink="/gallery">Gallery</a></li>
-			<li><a class="button" routerLink="/newsletter">Newsletter</a></li>
-			<li><a class="button" routerLink="/donations">Donations</a></li>
-			<li><a class="button" routerLink="/scholarship">Scholarship</a></li>
-			<li><a class="button" routerLink="/interest">Interested</a></li>
-			<li><a class="button" routerLink="/philanthropy">Philanthropy</a></li>
-			<li><a class="button" routerLink="/brothers">Brothers</a></li>
-		</ul>
-	</nav>
-
-	<!-- <div class="calendar">
-		<full-calendar [options]="calendarOptions"></full-calendar>
-	</div> -->
-	
-	<!-- Router-outlit is the view (each view has its own html in the app folder) !-->
-	<router-outlet></router-outlet>
-	
-	<div class="footer">
-	  <a href="https://www.instagram.com/valpolambdachi/" target="_blank"> <img src="https://love2dev.com/img/2000px-instagram_logo_2016svg-2000x2000.png" alt="Instagram" style="width:42px;height:42px;"></a>
-	</div>
-	</body>
+		<div class="full-page">
+			<app-navbar class="fixed-top"></app-navbar>	
+			<!-- <h1>LCA WebPage</h1>
+			<nav>
+				<ul class = "a">
+					<li><a class="button" routerLink="/home">Home</a></li>
+					<li><a class="button" routerLink="/about-us">About Us</a></li>
+					<li><a class="button" routerLink="/gallery">Gallery</a></li>
+					<li><a class="button" routerLink="/newsletter">Newsletter</a></li>
+					<li><a class="button" routerLink="/donations">Donations</a></li>
+					<li><a class="button" routerLink="/scholarship">Scholarship</a></li>
+					<li><a class="button" routerLink="/interest">Interested</a></li>
+					<li><a class="button" routerLink="/philanthropy">Philanthropy</a></li>
+					<li><a class="button" routerLink="/brothers">Brothers</a></li>
+				</ul>
+			</nav> -->
+		
+			<!-- <div class="calendar">
+				<full-calendar [options]="calendarOptions"></full-calendar>
+			</div> -->
+			
+			<!-- Router-outlet is the view (each view has its own html in the app folder) !-->
+			<router-outlet></router-outlet>
+			
+			<!-- <div class="footer">
+			  <a href="https://www.instagram.com/valpolambdachi/" target="_blank"> <img src="https://love2dev.com/img/2000px-instagram_logo_2016svg-2000x2000.png" alt="Instagram" style="width:42px;height:42px;"></a>
+			</div> -->
+		</div>
+	</body>	
+</html>
