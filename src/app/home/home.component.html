@@ -9,45 +9,17 @@
     </div>
 </div>
 
-<fieldset>
-	<div>
-		<label for = "title">Title</label>
-		<input
-			type = "text"
-			class = "form-control"
-			id = "title"
-			[(ngModel)] = "blogpost.title"
-			name = "title"
-		/>
-		<label for = "body">Body</label>
-		<input
-			type = "text"
-			class = "form-control"
-			id = "body"
-			[(ngModel)] = "blogpost.body"
-			name = "body"
-		/>
-		<label for = "date">Date</label>
-		<input
-			type = "text"
-			class = "form-control"
-			id = "date"
-			[(ngModel)] = "blogpost.date"
-			name = "date"
-		/>
-		<button (click) = "saveBlogpost()">Submit</button>
-	</div>
+<app-add-blogpost></app-add-blogpost>
 
-	<ul>
-		<div *ngFor = "let blogpost of blogposts">
-			<div>
-				<h5>{{blogpost.title}}</h5>
-				<p>{{blogpost.body}}</p>
-				<sub>{{blogpost.date}}</sub>
-			</div>
+<ul>
+	<div *ngFor = "let blogpost of blogposts">
+		<div>
+			<h5>{{blogpost.title}}</h5>
+			<p>{{blogpost.body}}</p>
+			<sub>{{blogpost.date}}</sub>
 		</div>
-	</ul>
-</fieldset>
+	</div>
+</ul>
 
 <style>
   .Post {

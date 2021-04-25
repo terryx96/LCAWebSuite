@@ -9,7 +9,6 @@ import { DataService } from '../services/data/data.service';
 })
 export class HomeComponent implements OnInit {
 
-  blogpost: Blogpost = new Blogpost();
   blogposts: any[] = [];
   dbpath: string = "/blogpost";
 
@@ -21,12 +20,6 @@ export class HomeComponent implements OnInit {
     this.dataService.getAll().valueChanges()
     .subscribe((blogposts: any) => {
       this.setBlogposts(blogposts);
-    });
-  }
-
-  saveBlogpost(): void {
-    this.dataService.create(this.blogpost).then(() => {
-      console.log("new blog post created successfully");
     });
   }
 

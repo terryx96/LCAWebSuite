@@ -35,6 +35,7 @@ import { AddBrotherComponent } from './add-brother/add-brother.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ImageComponentComponent } from './image-component/image-component.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddBlogpostComponent } from './add-blogpost/add-blogpost.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     BrothersListComponent,
     AddBrotherComponent,
     ImageComponentComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddBlogpostComponent
   ],
   imports: [
   BrowserModule,
