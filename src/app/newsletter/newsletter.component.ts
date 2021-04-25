@@ -12,12 +12,10 @@ import { FileUpload } from '../services/file/FileUpload';
 })
 export class NewsletterComponent implements OnInit {
 
-  percentage: number | undefined;
-  fileUpload: FileUpload | undefined;
   newsletter: Newsletter = new Newsletter();
   newsletters: Newsletter[] = [];
   dbpath: string = "/newsletter";
-  pdfSrc: string = "gs://lcavu-5d8db.appspot.com/uploads/MATH 321 HW8.pdf";
+  pdfSrc: string = "https://www.gutenberg.org/files/98/old/2city12p.pdf";
 
   constructor(private fileService: FileService,
               private dataService: DataService,
@@ -26,20 +24,6 @@ export class NewsletterComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataService.setDbPath(this.dbpath);
-    this.dataService.getAll().valueChanges().subscribe()
-  }
-
-  upload(event: any) {    
-    const file = event.target.files[0]
-    this.fileUpload = new FileUpload(file);
-    this.fileService.upload(this.fileUpload).subscribe(
-      (percentage: number) => {
-        this.percentage = Math.round(percentage);
-      },
-      (error: any) => {
-        console.log(error)
-      }
-    )
   }
 
   setNewsletters(newsletters: Newsletter[]) {

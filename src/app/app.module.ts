@@ -33,9 +33,9 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { BrothersListComponent } from './brothers-list/brothers-list.component';
 import { AddBrotherComponent } from './add-brother/add-brother.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
-import { ImageComponentComponent } from './image-component/image-component.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddBlogpostComponent } from './add-blogpost/add-blogpost.component';
+import { AddUploadComponent } from './add-upload/add-upload.component';
 
 @NgModule({
   declarations: [
@@ -53,9 +53,9 @@ import { AddBlogpostComponent } from './add-blogpost/add-blogpost.component';
     AdminComponent,
     BrothersListComponent,
     AddBrotherComponent,
-    ImageComponentComponent,
     NavbarComponent,
-    AddBlogpostComponent
+    AddBlogpostComponent,
+    AddUploadComponent
   ],
   imports: [
   BrowserModule,
