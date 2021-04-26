@@ -1,9 +1,28 @@
-span.Name{
-  background-color: red;
+table {
+  background-color: #5e266d;
+  text-align: center;
+  margin: auto;
+  color: #ffd133;
 }
-span.year{
-background-color: green;
+  table tr:not(:first-child) {
+    border-bottom-style: solid;
+    border-bottom-color: #ffd133;
+    border-bottom-width: 1px;
+  }
+  table tr th {
+    min-width: 100px;
+  }
+
+table tr th.Pict img{
+    max-width: 100px;
+    max-height: 200px;
 }
-div.all{
-    background-color: white;
-}
+table tr th.Name {
+    background-color: #046b37;
+  }
+  table tr th.Major {
+    background-color: #046b37;
+  }
+  table tr th.Year {
+    background-color: #046b37;
+  }
