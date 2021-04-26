@@ -47,7 +47,7 @@ button.add {
   background-color: #F3F3F3;
   padding-top: 2em;
   text-align: center;
-  height: 100vh;
+  height: auto;
 }
 
 .activities h1 {
@@ -65,14 +65,14 @@ fieldset {
   border: 1px dotted;
 }
 ul {
-    background-color: rgba(255,255,255,1);
+    background-color: #F3F3F3;
 }
 
 div.blogarea {
   max-width: 50%;
   border: 1px solid black;
   padding: 10px;
-  background-color: rgba(237,124,14,.5);
+  background-color: #f3ebdc;
   margin: auto;
   margin-top: 20px;
   text-align: right;

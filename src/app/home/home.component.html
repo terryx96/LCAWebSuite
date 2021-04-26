@@ -24,17 +24,16 @@
 	<img src="../../assets/sheesh.jpg" class="img-fluid studImg" alt="group pic">
 </div>
 <div class="activities">
-	<h1>Fraternity Activities</h1>
-	 
+	<h1>Chapter Updates</h1>
+	<ul>
+		<br />
+		<div class = "blogarea" *ngFor = "let blogpost of blogposts">
+	
+				<h5>{{blogpost.title}}</h5>
+				<p>{{blogpost.body}}</p>
+				<sub>{{blogpost.date}}</sub>
+			
+		</div>
+		<br />
+	</ul>
 </div>
-<ul>
-	<br />
-	<div class = "blogarea" *ngFor = "let blogpost of blogposts">
-
-			<h5>{{blogpost.title}}</h5>
-			<p>{{blogpost.body}}</p>
-			<sub>{{blogpost.date}}</sub>
-		
-	</div>
-	<br />
-</ul>
