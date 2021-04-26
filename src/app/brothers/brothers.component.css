@@ -6,6 +6,7 @@ button.add {
 
 fieldset {
   display: block;
+  text-align: center;
   margin-left: 2px;
   margin-right: 2px;
   padding-top: 0.35em;
@@ -17,4 +18,9 @@ fieldset {
 
 .container {
   padding-top: 8em;
+}
+
+div.col-sm-8 {
+margin: auto;
+background-color: #f3f3f3;
 }

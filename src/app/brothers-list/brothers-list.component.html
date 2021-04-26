@@ -1,12 +1,14 @@
-<ul>
-	<div *ngFor = "let brother of brothers">
-		<div>
-			<h5>Name: {{brother.name}}</h5>
-			<h5>Iota Sigma Number: {{brother.isnum}}</h5>
-			<h5>Graduation Year: {{brother.year}}</h5>
-			<h5>Major(s): {{brother.majors}}</h5>
-			<h5>Minor(s): {{brother.minors}}</h5>
-			<h5>Officer Position: {{brother.zeta}}</h5>
-		</div>
-	</div>
-</ul>
+<table>
+	<tr>
+		<th></th>
+		<th>Name</th>
+		<th>Major</th>
+		<th>Year</th>
+	</tr>
+	<tr *ngFor="let brother of brothers" class="all">
+			<th class="Pict"><img src="https://www.valpo.edu/computing-information-sciences/files/2015/02/20150204-JLH-Nick-Rosasco-004.jpg" alt={{brother.name}}></th>
+			<th class="Name"> <h3>{{brother.name}}</h3></th>
+			<th class="Major"> MAJOR </th><!--MAJOR-->
+			<th class="Year">Class of {{brother.year}}</th>
+		</tr>
+</table>

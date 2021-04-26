@@ -20,7 +20,7 @@ export class FileService {
 
     storageRef.getDownloadURL().subscribe((downloadURL) => {
       fileUpload.url = downloadURL;
-      fileUpload.name = fileUpload.file.name;
+      fileUpload.name = fileUpload.file.name + Date.now();
       this.saveFileData(fileUpload);
     })
 

@@ -20,7 +20,7 @@ import { PhilanthropyComponent } from './philanthropy/philanthropy.component';
 import { BrothersComponent } from './brothers/brothers.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { AdminComponent } from './admin/admin.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -32,7 +32,10 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { BrothersListComponent } from './brothers-list/brothers-list.component';
 import { AddBrotherComponent } from './add-brother/add-brother.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AddBlogpostComponent } from './add-blogpost/add-blogpost.component';
+import { AddUploadComponent } from './add-upload/add-upload.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     AdminComponent,
     BrothersListComponent,
     AddBrotherComponent,
-    NavbarComponent
+    NavbarComponent,
+    AddBlogpostComponent,
+    AddUploadComponent
   ],
   imports: [
   BrowserModule,
@@ -70,10 +75,13 @@ import { NavbarComponent } from './navbar/navbar.component';
   ]),
   AngularFireModule.initializeApp(environment.firebaseConfig),
   AngularFireDatabaseModule,
+  PdfViewerModule,
+  ReactiveFormsModule,
   AngularFireAuthModule,
   MDBBootstrapModule.forRoot(),
   AngularFireStorageModule,
-  FormsModule
+  FormsModule 
+  
 ],
   providers: [AuthenticationService, AuthenticationGuard],
   bootstrap: [AppComponent]

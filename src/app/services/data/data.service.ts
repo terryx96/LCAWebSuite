@@ -22,6 +22,7 @@ export class DataService {
   }
 
   create(entry: Entry) {
+    console.log("data service ran")
     return this.tableRef.push(entry);
   }
 

@@ -5,7 +5,7 @@
 		
 	<body>
 		<div class="full-page">
-			<app-navbar class="fixed-top"></app-navbar>	
+			<app-navbar class="fixed-top"></app-navbar>
 			<!-- <h1>LCA WebPage</h1>
 			<nav>
 				<ul class = "a">
@@ -27,10 +27,29 @@
 			
 			<!-- Router-outlet is the view (each view has its own html in the app folder) !-->
 			<router-outlet></router-outlet>
-			
-			<!-- <div class="footer">
-			  <a href="https://www.instagram.com/valpolambdachi/" target="_blank"> <img src="https://love2dev.com/img/2000px-instagram_logo_2016svg-2000x2000.png" alt="Instagram" style="width:42px;height:42px;"></a>
-			</div> -->
+			<div class="popup" onclick="myFunction()">
+				<img class="PostImage" src="https://www.sf.k12.sd.us/images/gallery/logos/ADA_Icon.png" alt="alternatetext">
+					<span class="popuptext" id="myPopup">
+						<div onclick="newFunction()" id="google_translate_element"></div> <br>
+					<p class="ADA">ColorBlind</p>
+						<p><input type="radio" name="browser" id="myCheck" onclick="changeColorSetRegular()">Regular</p>
+						<p><input type="radio" name="browser" id="myCheck" onclick="changeColorSetProtanopia()">Protanopia</p>
+						<p><input type="radio" name="browser" onclick="check(this.value)">Deuteranopia</p>
+						<p><input type="radio" name="browser" onclick="check(this.value)">Tritanopia</p><br>
+					<p class="ADA">Text Size</p>
+						<p><input type="radio" name="fontSize" onclick="changeFontSize('text', 100)"> Small</p>
+						<p><input type="radio" name="fontSize" onclick="changeFontSize('text', 120)"> Medium</p>
+						<p><input type="radio" name="fontSize" onclick="changeFontSize('text', 140)"> Large</p><br>
+				</span>
+			</div>
+
+			<div class="footer">
+				<a href="https://www.instagram.com/valpolambdachi/" target="_blank"> <img src="https://love2dev.com/img/2000px-instagram_logo_2016svg-2000x2000.png" alt="Instagram" style="max-width:62px;max-height:62px;"></a>
+				<a href="https://twitter.com/valpolambdachi?lang=en" target="_blank"> <img src="https://logos-world.net/wp-content/uploads/2020/04/Twitter-Logo.png" alt="Twitter" style="max-width:72px;max-height:72px;"></a>
+				<a href="https://www.facebook.com/ValpoLambdaChiAlpha/" target="_blank"> <img src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512" alt="Facebook" style="max-width:62px;max-height:62px;"></a>
+				<p>1509 Chapel Dr, Valparaiso, IN 46383</p>
+			</div>
+			<br />
 		</div>
 	</body>	
 </html>
