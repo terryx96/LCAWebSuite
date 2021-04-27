@@ -1,3 +1,1 @@
-<div *ngFor="let newsletter of newsletters" class = "all">
-    {{newsletter.url}}
-</div>
+<app-pdf-component *ngFor="let newsletter of newsletters" [newsletter]="newsletter"></app-pdf-component>

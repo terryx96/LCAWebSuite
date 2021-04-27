@@ -11,6 +11,7 @@ import { DataService } from '../services/data/data.service';
 export class NewslettersListComponent implements OnInit {
 
   newsletters: Newsletter[] = [];
+  pdfSrc = "https://firebasestorage.googleapis.com/v0/b/lcavu-5d8db.appspot.com/o/uploads%2Fnovember.pdf?alt=media&token=3fd426e4-1b33-4fd1-8399-fa455666b045";
 
   constructor(private dataService: DataService) { 
     this.dataService.setDbPath("/uploads")
