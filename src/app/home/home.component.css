@@ -30,7 +30,8 @@ button.add {
   padding-top: 2em;
   background-color: #f3ebdc;
   text-align: center;
-  height: 100vh;
+  height: auto;
+  padding-bottom: 2em;
 }
 
 .welcome img {

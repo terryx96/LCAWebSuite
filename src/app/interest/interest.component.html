@@ -2,36 +2,28 @@
 	<div class="modal-dialog" role="document">
 	  <div class="modal-content">
 		<div class="modal-header">
-		  <h5 class="modal-title" id="exampleModalLabel">Interest Form</h5>
+		  <h5 class="modal-title">Interest Form</h5>
 		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 			<span aria-hidden="true">&times;</span>
 		  </button>
 		</div>
 		<div class="modal-body">
-		  <form action="https://formspree.io/f/mbjqdrvy" method="POST">
+		  <form id="int-form" action="https://formcarry.com/s/19Zcfp43_ap" method="POST" accept-charset="UTF-8">
 			  <div class="form-group">
-			    <label for="sender-name" class="col-form-label">First & Last Name:</label>
-			    <input type="text" name="_replyto" class="form-control" id="sender-name">
+			    <label for="full-name" class="col-form-label">Name</label>
+			    <input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last">
+			    <label for="email-address" class="col-form-label">Email Address</label>
+			    <input type="email" name="_replyto" class="form-control" placeholder="Your email" id="email-address">
+                <label for="message" class="col-form-label">What interests do you have regarding Lambda Chi?</label>
+                <textarea rows="5" name="message" class="form-control" placeholder="Your message" id="message"></textarea>
 			  </div>
-			  <div class="form-group">
-                <label for="email-address" class="col-form-label">Email Address:</label>
-                <input type="text" name="email" class="form-control" id="email-address">
-              </div>
-              <div class="form-group">
-                <label for="phone-number" class="col-form-label">Phone Number:</label>
-                <input type="text" name="phone" class="form-control" id="phone-number">
-              </div>
-              <div class="form-group">
-                <label for="interest-message" class="col-form-label">What interests do you have regarding Lambda Chi?</label>
-                <input type="text" name="message" class="form-control" id="interest-message">
-              </div>
+			  <input type="hidden" name="_subject" id="email-subject" value="LCA interest from website">
               <div class="modal-footer">
                 <a>We will reach out soon!</a>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" form="int-form" class="btn btn-primary">Submit</button>
               </div>
 		  </form>
-          
 		</div>
 	  </div>
 	</div>
