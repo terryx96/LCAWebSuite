@@ -142,6 +142,6 @@ button.dropbtn:hover {
 
 a.tlink:hover{
     background-color: black;
-    font-size: 100%;
+    font-size: 1.25vw;
     font-family: interbold;
 }
