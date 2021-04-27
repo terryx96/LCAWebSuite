@@ -1,24 +1,57 @@
 button.add {
 	background-color: white;
-    color: black;
-    border: 2px solid #4CAF50; /* Green */
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
 }
 
-.container {
+.container-fluid {
   padding-top: 8em;
-  padding-bottom: 8em;
+  width: 100%;
 }
 
 .studImg {
-  height: auto;
-  padding: 1px;
-  width: 70%;
+  width: 50em;
+  margin: auto;    
+  display: block;
 }
 
 .coatImg {
-  height: auto;
-  padding: 1px;
-  width: 60%;
+  width: 30em;
+  margin: auto;    
+  display: block;
+}
+
+.welcome h1 {
+  color: #093D20;
+}
+
+.welcome {
+  margin-top: 2em;
+  padding-top: 2em;
+  background-color: #f3ebdc;
+  text-align: center;
+  height: 100vh;
+}
+
+.welcome img {
+  padding-top: 2em;
+  width: 30em;
+}
+
+.welcome p {
+  width: 50%;
+  margin: auto;
+}
+
+.activities {
+  background-color: #F3F3F3;
+  padding-top: 2em;
+  text-align: center;
+  height: 100vh;
+}
+
+.activities h1 {
+  color: #093D20;
 }
 
 fieldset {
