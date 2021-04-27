@@ -21,6 +21,6 @@ a {
 .navbar-brand>img {
     height: auto;
     padding: 1px;
-    width: 20%;
+    max-height: 75px;
 
 }
