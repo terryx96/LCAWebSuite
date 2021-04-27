@@ -41,6 +41,7 @@ button.add {
 .welcome p {
   width: 50%;
   margin: auto;
+  text-align: center;
 }
 
 .activities {
