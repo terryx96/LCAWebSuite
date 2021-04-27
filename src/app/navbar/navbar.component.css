@@ -57,27 +57,11 @@ a:visited {
 }
     
     /* mouse over link */
-<<<<<<< HEAD
-a:hover {
-    color:#093d20;
-    font-size:1.25vw;
-    text-decoration: none;
-    background-color:#EEE;
-}
-
-.join{
-   
-    background-size:10px 10px;
-    padding-right:1px;
-    background-repeat:no-repeat;
-    text-decoration: none;
-=======
 a:hover:first-child {
   color: #046b37;
   font-size: 1.25vw;
   border-radius: 5%;
   background-size: 10px 10px;
->>>>>>> b6394efb42e425b443f5057d272f16cc50984d54
 }
     
     /* selected link */
@@ -87,17 +71,6 @@ a:active {
     background-color:#EEE;
 } 
 
-.tlink {
-    font-size: 100%;
-    font-family: interbold;
-    
-    }
-
-.tlink a:hover {
-    font-size: 100%;
-    font-family: interbold;
-    background-color:#EEE;
-    }
 
 .dropbtn {
 padding-right: 10px;
@@ -157,14 +130,6 @@ border-color: #093d20;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-<<<<<<< HEAD
-.dropdown:hover .dropbtn {
-   background-color: #EEE;
-    background-size:10px 10px;
-    margin:auto;
-    background-repeat:no-repeat;
-}
-=======
 .dropdown:hover .dropbtn{
   border-radius: 5%;
   background-size: 10px 10px;
@@ -177,5 +142,6 @@ button.dropbtn:hover {
 
 a.tlink:hover{
     background-color: black;
+    font-size: 100%;
+    font-family: interbold;
 }
->>>>>>> b6394efb42e425b443f5057d272f16cc50984d54
