@@ -10,13 +10,13 @@ button.add {
 }
 
 .studImg {
-  width: 50em;
+  height: 50vh;
   margin: auto;    
   display: block;
 }
 
 .coatImg {
-  width: 30em;
+  height: 50vh;
   margin: auto;    
   display: block;
 }
