@@ -49,6 +49,8 @@
         [(ngModel)] = "brother.zeta"
         name = "zeta"
     />
+    <label>Upload File</label>
+    <input type = "file" (change)="onPictureUploaded($event)" accept=".png,.jpg,.pdf" class = "form-control">
     <button (click) = "saveBrother()">Submit</button>
 </div>
 </div>
