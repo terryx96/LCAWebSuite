@@ -36,6 +36,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddBlogpostComponent } from './add-blogpost/add-blogpost.component';
 import { AddUploadComponent } from './add-upload/add-upload.component';
+import { NewslettersListComponent } from './newsletters-list/newsletters-list.component';
+import { PdfComponentComponent } from './pdf-component/pdf-component.component';
 import { RemoveBlogpostComponent } from './remove-blogpost/remove-blogpost.component';
 import { RemoveBrothersComponent } from './remove-brothers/remove-brothers.component';
 
@@ -58,6 +60,8 @@ import { RemoveBrothersComponent } from './remove-brothers/remove-brothers.compo
     NavbarComponent,
     AddBlogpostComponent,
     AddUploadComponent,
+    NewslettersListComponent,
+    PdfComponentComponent
     RemoveBlogpostComponent,
     RemoveBrothersComponent
   ],

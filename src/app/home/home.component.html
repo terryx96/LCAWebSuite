@@ -32,15 +32,24 @@
 <app-interest></app-interest>
 <div class="activities">
 	<h1>Chapter Updates</h1>
-	<ul>
-		<br />
-		<div class = "blogarea" *ngFor = "let blogpost of blogposts">
-				<h5>{{blogpost.title}}</h5>
-				<p>{{blogpost.body}}</p>
-				<sub>{{blogpost.date}}</sub>
+	<div class="row">
+		<div class="col-8">
+			<ul>
+				<br />
+				<div class = "blogarea" *ngFor = "let blogpost of blogposts">			
+						<h5>{{blogpost.title}}</h5>
+						<p>{{blogpost.body}}</p>
+						<sub>{{blogpost.date}}</sub>		
+				</div>
+				<br />
+			</ul>
 		</div>
-		<br />
-	</ul>
+		<div class="col-4">
+			<div class="calendar">
+				<full-calendar [options]="calendarOptions"></full-calendar>
+			</div>
+		</div>
+	</div>
 </div>
 
 

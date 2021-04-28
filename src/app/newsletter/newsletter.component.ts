@@ -14,8 +14,8 @@ export class NewsletterComponent implements OnInit {
 
   newsletter: Newsletter = new Newsletter();
   newsletters: Newsletter[] = [];
-  dbpath: string = "/newsletter";
-  pdfSrc: string = "https://www.gutenberg.org/files/98/old/2city12p.pdf";
+  dbpath: string = "/uploads";
+  pdfSrc: string = "https://firebasestorage.googleapis.com/v0/b/lcavu-5d8db.appspot.com/o/uploads%2Fnovember.pdf?alt=media&token=3fd426e4-1b33-4fd1-8399-fa455666b045";
 
   constructor(private fileService: FileService,
               private dataService: DataService,
