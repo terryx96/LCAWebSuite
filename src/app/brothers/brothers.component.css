@@ -16,11 +16,17 @@ fieldset {
   border: 1px dotted;
 }
 
-.container {
-  padding-top: 8em;
+img {
+  width: 50%;
+  margin-left: 20%;
+  margin-bottom: 10%;
 }
 
-div.col-sm-8 {
-margin: auto;
-background-color: #f3f3f3;
+.container-fluid {
+  padding-top: 8em;
+  background-color: #f3ebdc;
+}
+
+p {
+  margin-right: 20%;
 }
