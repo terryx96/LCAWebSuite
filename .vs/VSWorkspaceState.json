@@ -3,12 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\admin",
-    "\\src\\app\\brothers-list",
-    "\\src\\app\\home",
-    "\\src\\app\\remove-blogpost",
-    "\\src\\app\\remove-brothers"
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\brothers-list\\brothers-list.component.html",
+  "SelectedNode": "\\src\\assets\\.gitkeep",
   "PreviewInSolutionExplorer": false
 }
