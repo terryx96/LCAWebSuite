@@ -61,7 +61,7 @@ import { RemoveBrothersComponent } from './remove-brothers/remove-brothers.compo
     AddBlogpostComponent,
     AddUploadComponent,
     NewslettersListComponent,
-    PdfComponentComponent
+    PdfComponentComponent,
     RemoveBlogpostComponent,
     RemoveBrothersComponent
   ],
