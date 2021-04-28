@@ -1,4 +1,19 @@
-h1 {
-    color: #FFB71D;
-    margin-top: 5px;
+.about-us {
+    padding-top: 8em;
+    background-color: #f3ebdc;
+    height: 90vh;
+}
+
+.col-8 {
+    text-align: center;
+}
+
+p {
+    margin-top: 1em;
+    margin-right: 5em;
+}
+
+img {
+    margin: auto;    
+    display: block;
 }
