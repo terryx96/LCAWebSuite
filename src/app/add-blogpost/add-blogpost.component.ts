@@ -18,6 +18,7 @@ export class AddBlogpostComponent implements OnInit {
   }
 
   saveBlogpost(): void {
+    this.dataService.setDbPath("/blogpost");
     this.dataService.create(this.blogpost).then(() => {
       console.log("new blog post created successfully");
     });
