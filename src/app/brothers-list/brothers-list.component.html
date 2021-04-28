@@ -8,7 +8,7 @@
 	<tr *ngFor="let brother of brothers" class="all">
 			<th class="Pict"><img src="https://www.valpo.edu/computing-information-sciences/files/2015/02/20150204-JLH-Nick-Rosasco-004.jpg" alt={{brother.name}}></th>
 			<th class="Name"> <h3>{{brother.name}}</h3></th>
-			<th class="Major"> MAJOR </th><!--MAJOR-->
+			<th class="Major"> {{brother.majors}} </th><!--MAJOR-->
 			<th class="Year">Class of {{brother.year}}</th>
 		</tr>
 </table>

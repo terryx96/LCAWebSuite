@@ -22,17 +22,22 @@ table tr th.Pict img{
 table tr th.Name {
     background-color: #f3ebdc;
     font-size:2vw;
-    
+    padding-left:1vw;
+    padding-right:1vw;
   }
   table tr th.Major {
     background-color: #f3ebdc;
     font-size:2vw;
     font-family:interreg;
+    padding-left:1vw;
+    padding-right:1vw;
   }
   table tr th.Year {
     background-color: #f3ebdc;
     font-size:2vw;
     font-family:interreg;
+    padding-left:1vw;
+    padding-right:1vw;
   }
 .h3{
   font-size:2vh;
