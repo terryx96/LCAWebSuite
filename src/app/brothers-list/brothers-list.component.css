@@ -16,6 +16,17 @@ table {
     min-width: 2vw;
   }
 
+  
+@font-face {
+  font-family: interreg;
+  src: url(Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: interbold;
+  src: url(Inter-Bold.ttf);
+}
+
 table tr th.Pict img{
     height: 15vh;
 }

@@ -1,7 +1,8 @@
 button.add {
 	background-color: white;
     color: black;
-    border: 2px solid #4CAF50; /* Green */
+    border: 2px solid #093d20; /* Green */
+    font-family:interreg;
 }
 
 fieldset {
@@ -14,6 +15,16 @@ fieldset {
   padding-left: 0.75em;
   padding-right: 0.75em;
   border: 1px dotted;
+}
+
+@font-face {
+  font-family: interreg;
+  src: url(Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: interbold;
+  src: url(Inter-Bold.ttf);
 }
 
 img {
@@ -29,4 +40,11 @@ img {
 
 p {
   margin-right: 20%;
+  font-family:interreg;
+  color:#093d20;
+}
+
+.h6, h1{
+  font-family:interreg;
+  color:#093d20;
 }
