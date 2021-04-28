@@ -3,11 +3,12 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\brothers",
+    "\\src\\app\\admin",
     "\\src\\app\\brothers-list",
     "\\src\\app\\home",
-    "\\src\\assets"
+    "\\src\\app\\remove-blogpost",
+    "\\src\\app\\remove-brothers"
   ],
-  "SelectedNode": "\\src\\app\\home\\home.component.html",
+  "SelectedNode": "\\src\\app\\brothers-list\\brothers-list.component.html",
   "PreviewInSolutionExplorer": false
 }
