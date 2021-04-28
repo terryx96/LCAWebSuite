@@ -29,15 +29,7 @@ export class AddUploadComponent implements OnInit {
   upload(event: any) {    
     const file = event.target.files[0]
     this.fileUpload = new FileUpload(file);
-
-    this.fileService.upload(this.fileUpload).subscribe(
-      (percentage: number) => {
-        this.percentage = Math.round(percentage);
-      },
-      (error: any) => {
-        console.log(error)
-      }
-    )
+    this.fileService.upload(this.fileUpload);
   }
 
 }
