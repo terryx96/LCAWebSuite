@@ -3,6 +3,13 @@
     background-color: #f3ebdc;
     /* height: 90vh; */
     margin: auto;
+    padding-bottom: 4em;
+}
+
+.history {
+    background-color: #F3F3F3;
+    padding-bottom: 4em;
+    padding-top: 4em;
 }
 
 .col-8 {
@@ -14,7 +21,19 @@ p {
     margin-right: 15em;
 }
 
-img {
+h1 {
+    text-align: center;
+    margin: auto;
+    padding-bottom: 1em;
+}
+
+.badgeImg {
+    margin: auto;    
+    display: block;
+    width: 15vw;
+}
+.oldImg {
+    width: 50vw;
     margin: auto;    
     display: block;
 }

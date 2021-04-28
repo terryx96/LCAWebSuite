@@ -13,7 +13,22 @@ button.add {
   color: #093D20;
 }
 
+#navdown {
+  margin: auto;
+  margin-left: 35vw;
+  margin-right: 35vw;
+  margin-top: 77vh;
+  display: block;
+  height: 5vh;
+}
 
+.header {
+  background-image: url('../../assets/hoco.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+}
 
 .container-fluid {
   padding-top: 8em;
@@ -38,7 +53,6 @@ button.add {
 }
 
 .welcome {
-  margin-top: 2em;
   padding-top: 2em;
   background-color: #f3ebdc;
   text-align: center;
@@ -90,12 +104,6 @@ div.blogarea {
   margin: auto;
   margin-top: 20px;
   text-align: right;
-}
-
-h5 {
-  text-align: left;
-  font-size: 25px;
-  padding-left: 2%;
 }
 
 p {
