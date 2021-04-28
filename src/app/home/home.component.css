@@ -4,6 +4,17 @@ button.add {
   border: 2px solid #4CAF50; /* Green */
 }
 
+.calendar {
+  margin: auto;
+  margin-right: 10em;
+  padding: auto;
+  width: 35em;
+  font-size: 15px;
+  color: #093D20;
+}
+
+
+
 .container-fluid {
   padding-top: 8em;
   width: 100%;
@@ -11,6 +22,7 @@ button.add {
 
 .studImg {
   height: 50vh;
+  width: auto;
   margin: auto;    
   display: block;
 }
@@ -71,7 +83,7 @@ ul {
 }
 
 div.blogarea {
-  max-width: 50%;
+  max-width: 70%;
   border: 1px solid black;
   padding: 10px;
   background-color: #f3ebdc;

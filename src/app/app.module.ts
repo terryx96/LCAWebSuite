@@ -36,6 +36,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddBlogpostComponent } from './add-blogpost/add-blogpost.component';
 import { AddUploadComponent } from './add-upload/add-upload.component';
+import { NewslettersListComponent } from './newsletters-list/newsletters-list.component';
+import { PdfComponentComponent } from './pdf-component/pdf-component.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +57,9 @@ import { AddUploadComponent } from './add-upload/add-upload.component';
     AddBrotherComponent,
     NavbarComponent,
     AddBlogpostComponent,
-    AddUploadComponent
+    AddUploadComponent,
+    NewslettersListComponent,
+    PdfComponentComponent
   ],
   imports: [
   BrowserModule,
