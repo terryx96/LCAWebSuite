@@ -2,47 +2,48 @@
 	<div class="overlay"></div>
 	<a id="navdown" href="#navdown" class="btn btn-outline-light" role="button" aria-pressed="true">Learn More</a>
 </header>
-<div class="welcome" id="welcome">
-	<h1>Welcome to</h1>
-	<h1>Lambda Chi Alpha</h1>
-	<h3>Iota Sigma Zeta</h3>
-	<br>
-	<p>
-		A man reaches new heights when he realizes the best version of himself. Whether you’re a potential member, an active Brother or an alumnus, you have a remarkable opportunity to shape the future as part of a lasting brotherhood. You have a mark to make. Let’s make it last.
-	</p>
-	<br>
-	<p>
-		There’s no better way to make the most of your college experience—and beyond—than through brotherhood in Lambda Chi Alpha. Like many great brothers before you, it’s your time to have the courage to become the man you’ve always known you could be. Write your story of honor. Your story of integrity. Your story of legacy.
-	</p>
-	<img src="../../assets/sheesh.jpg" class="img-fluid sheeshImg" alt="group pic">
-	<br>
-	<br>
-	<h5>
-		Interested in learning more about Lambda Chi Alpha? Click
-		<a href="#interest-form" data-toggle="modal" data-target="#interest-form">here.</a>
-	</h5>
-</div>
-<app-interest></app-interest>
-<div class="activities">
-	<h1>Chapter Updates</h1>
-	<div class="row">
-		<div class="col-8">
-			<ul>
-				<br />
-				<div class = "blogarea" *ngFor = "let blogpost of blogposts">			
+<body onload="CheckIfADA()">
+	<div class="welcome" id="welcome">
+		<h1 class="welcomee">Welcome to</h1>
+		<h1 class="welcomee">Lambda Chi Alpha</h1>
+		<h3>Iota Sigma Zeta</h3>
+		<br>
+		<p>
+			A man reaches new heights when he realizes the best version of himself. Whether you’re a potential member, an active Brother or an alumnus, you have a remarkable opportunity to shape the future as part of a lasting brotherhood. You have a mark to make. Let’s make it last.
+		</p>
+		<br>
+		<p>
+			There’s no better way to make the most of your college experience—and beyond—than through brotherhood in Lambda Chi Alpha. Like many great brothers before you, it’s your time to have the courage to become the man you’ve always known you could be. Write your story of honor. Your story of integrity. Your story of legacy.
+		</p>
+		<img src="../../assets/sheesh.jpg" class="img-fluid sheeshImg" alt="group pic">
+		<br>
+		<br>
+		<h5>
+			Interested in learning more about Lambda Chi Alpha? Click
+			<a href="#interest-form" data-toggle="modal" data-target="#interest-form">here.</a>
+		</h5>
+	</div>
+	<app-interest></app-interest>
+	<div class="activities">
+		<h1 class="testtt">Chapter Updates</h1>
+		<div class="row">
+			<div class="col-8">
+				<ul class="blogareaa">
+					<br />
+					<div class="blogarea" *ngFor="let blogpost of blogposts">
 						<h5>{{blogpost.title}}</h5>
 						<p>{{blogpost.body}}</p>
-						<sub>{{blogpost.date}}</sub>		
+						<sub>{{blogpost.date}}</sub>
+					</div>
+					<br />
+				</ul>
+			</div>
+			<div class="col-4">
+				<div class="calendar">
+					<full-calendar [options]="calendarOptions"></full-calendar>
 				</div>
-				<br />
-			</ul>
-		</div>
-		<div class="col-4">
-			<div class="calendar">
-				<full-calendar [options]="calendarOptions"></full-calendar>
 			</div>
 		</div>
 	</div>
-</div>
-
+	</body>
 
