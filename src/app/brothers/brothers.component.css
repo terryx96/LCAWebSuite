@@ -35,3 +35,8 @@ p {
   background-color: #F3F3F3;
   padding-bottom: 4em;
 }
+
+hr {
+  max-width: 75%;
+  margin-left: 0px;
+}
