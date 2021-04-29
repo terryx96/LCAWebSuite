@@ -2,13 +2,12 @@ table {
   background-color: #f3ebdc;
   text-align: center;
   margin: auto;
-  color: #046b37;
-  font-family:interbold;
-  font-size:2vw;
+  color: #000;
+  
 }
   table tr:not(:first-child) {
     border-bottom-style: solid;
-    border-bottom-color: #046b37;
+    border-bottom-color: #000;
     border-bottom-width: 1px;
     font-size:2vw;
   }
@@ -28,28 +27,22 @@ table {
 }
 
 table tr th.Pict img{
-    height: 15vh;
+    max-width: 200px;
+    max-height: 275px;
 }
 table tr th.Name {
     background-color: #f3ebdc;
-    font-size:2vw;
-    padding-left:1vw;
-    padding-right:1vw;
   }
   table tr th.Major {
     background-color: #f3ebdc;
-    font-size:2vw;
-    font-family:interreg;
-    padding-left:1vw;
-    padding-right:1vw;
   }
   table tr th.Year {
     background-color: #f3ebdc;
-    font-size:2vw;
-    font-family:interreg;
-    padding-left:1vw;
-    padding-right:1vw;
   }
-.h3{
-  font-size:2vh;
-}
+
+  .title {
+    background-color: #ffffff;
+
+  }
+
+  

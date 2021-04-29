@@ -1,9 +1,16 @@
+<br>
 <table>
 	<tr>
-		<th></th>
-		<th>Name</th>
-		<th>Major</th>
-		<th>Year</th>
+		<th class="title"></th>
+		<th class="title">Name</th>
+		<th class="title">Major</th>
+		<th class="title">Year</th>
+	</tr>
+	<tr *ngFor="let brother of brothers; let i = index" class="all">
+		<th class="Pict"><img src="../../assets/BrothersPict/image{{i}}.png" /></th>
+		<th class="Name"> <h3>{{brother.name}}</h3></th>
+		<th class="Major"> MAJOR </th><!--MAJOR-->
+		<th class="Year">Class of {{brother.year}}</th>
 	</tr>
 	<tr *ngFor="let brother of brothers" class="all">
 			<th class="Pict"><img src="https://www.valpo.edu/computing-information-sciences/files/2015/02/20150204-JLH-Nick-Rosasco-004.jpg" alt={{brother.name}}></th>
@@ -12,3 +19,4 @@
 			<th class="Year">Class of {{brother.year}}</th>
 		</tr>
 </table>
+
