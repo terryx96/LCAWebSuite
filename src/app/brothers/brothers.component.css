@@ -40,12 +40,13 @@ img {
 .container-fluid {
   padding-top: 8em;
   background-color: #f3ebdc;
+  color: #093d20;
 }
 
 p {
   margin-right: 20%;
   font-family:interreg;
-  color:#093d20;
+  
 }
 
 .h6, h1{

@@ -1,0 +1,18 @@
+.modal-header {
+  background-color: lightgray;
+}
+.modal-body {
+  background-color: white;
+}
+.form-control{
+    background-color:white;
+}
+.modal-footer {
+}
+
+.btn-primary {
+  background-color: #4CAF50;
+}
+.btn-secondary {
+  background-color: pink;
+}
