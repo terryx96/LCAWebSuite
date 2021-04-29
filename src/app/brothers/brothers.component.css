@@ -17,6 +17,10 @@ fieldset {
   border: 1px dotted;
 }
 
+.bro-list{
+  background-color:white;
+}
+
 @font-face {
   font-family: interreg;
   src: url(Inter-Regular.ttf);

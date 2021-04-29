@@ -7,15 +7,20 @@ table {
   font-size:2vw;
 }
   table tr:not(:first-child) {
-    border-bottom-style: solid;
-    border-bottom-color: #046b37;
-    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: #046b37;
+    border-width: 3px;
     font-size:2vw;
   }
   table tr th {
     min-width: 10vw;
   }
 
+  .titlecol{
+    border-style: solid;
+    border-color: #046b37;
+    border-width: 3px;
+  }
   
 @font-face {
   font-family: interreg;
