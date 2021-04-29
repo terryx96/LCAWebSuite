@@ -93,10 +93,11 @@ fieldset {
 }
 ul {
     background-color: #F3F3F3;
+    padding-left: 0vw;
 }
 
 div.blogarea {
-  max-width: 70%;
+  max-width: 50vw;
   border: 1px solid black;
   padding: 10px;
   background-color: #f3ebdc;
@@ -116,4 +117,11 @@ sub {
   color: B7B7B7;
   opacity: .5;
   font-size: 75%;
+}
+.col-4{
+  max-width:40vw;
+}
+
+.col-8{
+  max-width:60vw;
 }
