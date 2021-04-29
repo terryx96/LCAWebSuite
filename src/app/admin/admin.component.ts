@@ -8,7 +8,7 @@ import { AuthenticationService } from '../services/auth/authentication.service';
 })
 export class AdminComponent implements OnInit {
 
-  constructor(public authService: AuthenticationService) {}
+  constructor(public authService: AuthenticationService) { }
 
   ngOnInit() {
   }

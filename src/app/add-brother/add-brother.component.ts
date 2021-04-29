@@ -22,6 +22,7 @@ export class AddBrotherComponent implements OnInit {
   }
   
   saveBrother(): void {
+    this.dataService.setDbPath("/brothers");
     this.dataService.create(this.brother);
   }
 
