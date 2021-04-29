@@ -3,8 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\philanthropy",
+    "\\src\\app\\scholarship",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\assets\\.gitkeep",
+  "SelectedNode": "\\src\\app\\philanthropy\\philanthropy.component.css",
   "PreviewInSolutionExplorer": false
 }
