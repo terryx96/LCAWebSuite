@@ -1,17 +1,20 @@
-table {
+.tablee {
   background-color: #f3ebdc;
   text-align: center;
   margin: auto;
   color: #046b37;
-  font-family:interbold;
-  font-size:2vw;
+  font-family: interbold;
+  font-size: 2vw;
+  border-color: #046b37;
+  border-style: solid;
+  border-width: 3px;
+  font-size: 2vw;
 }
-  table tr:not(:first-child) {
-    border-style: solid;
-    border-color: #046b37;
-    border-width: 3px;
-    font-size:2vw;
-  }
+table tr{
+  border-style: solid;
+  border-width: 3px;
+  font-size: 2vw;
+}
   table tr th {
     min-width: 10vw;
   }
@@ -35,12 +38,18 @@ table {
 table tr th.Pict img{
     width: 10vw;
 }
-table tr th.Name {
-    background-color: #f3ebdc;
-    font-size:2vw;
-    padding-left:1vw;
-    padding-right:1vw;
-  }
+.Name {
+  background-color: #f3ebdc;
+  font-size: 2vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+table tr th.isnum {
+  background-color: #f3ebdc;
+  font-size: 2vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
   table tr th.Major {
     background-color: #f3ebdc;
     font-size:2vw;
