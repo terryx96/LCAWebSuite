@@ -61,7 +61,7 @@ a:hover:first-child {
   color: #046b37;
   font-size: 2vh;
   border-radius: 5%;
-  background-size: 10px 10px;
+
 }
     
     /* selected link */
@@ -146,3 +146,4 @@ a.tlink:hover{
     font-size: 2vh;
     font-family: interbold;
 }
+
