@@ -9,7 +9,24 @@
 img {
     width: 20%;
     margin: auto;
+    display: block;
+}
+
+.rainpicImg {
+    width: 20%;
     display: inline-block;
+    margin: 0px 30px 0px 0px;
+}
+
+.baldgroupImg {
+    max-width: 20%;
+    display: inline-block;
+    margin: 0px 30px 0px 0px;
+}
+
+.side p {
+    margin-left: 0px;
+    margin-right: 8em;
 }
 
 p {

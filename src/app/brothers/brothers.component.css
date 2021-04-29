@@ -52,3 +52,8 @@ p {
   font-family:interreg;
   color:#093d20;
 }
+
+hr {
+  max-width: 75%;
+  margin-left: 0px;
+}
