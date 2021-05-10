@@ -1,30 +1,32 @@
-<div class="modal fade" id="interest-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h5 class="modal-title">Interest Form</h5>
-		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		  </button>
+<body onload="CheckIfADA()">
+	<div class="modal fade" id="interest-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Interest Form</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="int-form" action="https://formcarry.com/s/19Zcfp43_ap" method="POST" accept-charset="UTF-8">
+						<div class="form-group">
+							<label for="full-name" class="col-form-label">Name</label>
+							<input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last">
+							<label for="email-address" class="col-form-label">Email Address</label>
+							<input type="email" name="_replyto" class="form-control" placeholder="Your email" id="email-address">
+							<label for="message" class="col-form-label">What interests do you have regarding Lambda Chi?</label>
+							<textarea rows="5" name="message" class="form-control" placeholder="Your message" id="message"></textarea>
+						</div>
+						<input type="hidden" name="_subject" id="email-subject" value="LCA interest from website">
+						<div class="modal-footer">
+							<a>We will reach out soon!</a>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="submit" form="int-form" class="btn btn-primary">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
-		<div class="modal-body">
-		  <form action="https://formcarry.com/s/19Zcfp43_ap" method="POST" accept-charset="UTF-8" >
-			  <div class="form-group">
-			    <label for="full-name" class="col-form-label">Name</label>
-			    <input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last">
-			    <label for="email-address" class="col-form-label">Email Address</label>
-			    <input type="email" name="_replyto" class="form-control" placeholder="Your email" id="email-address">
-                <label for="message" class="col-form-label">What interests do you have regarding Lambda Chi?</label>
-                <textarea rows="5" name="message" class="form-control" placeholder="Your message" id="message"></textarea>
-			  </div>
-			  <input type="hidden" name="_subject" id="email-subject" value="LCA interest from website">
-              <div class="modal-footer">
-                <a>We will reach out soon!</a>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <input type="submit" value="Submit" class="btn btn-primary">
-              </div>
-		  </form>
-		</div>
-	  </div>
 	</div>
-</div>
+	</body>

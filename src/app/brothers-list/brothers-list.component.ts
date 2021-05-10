@@ -26,7 +26,7 @@ export class BrothersListComponent implements OnInit {
     }, (error: any) => {
       console.log(error)
     });
-  }
+  } 
 
   setBrothers(brothers: Brother[]) {
     this.brothers = brothers;

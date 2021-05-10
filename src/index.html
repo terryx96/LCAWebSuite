@@ -44,11 +44,157 @@
       txt = document.getElementById('text');
       txt.style.color = "";
     }
-    function changeColorSetProtanopia() {
+    function changeColorSetDarkMode() {
       counter = 1;
-      document.body.style.backgroundColor = "red";
-      txt = document.getElementById('text');
-      txt.style.color = "blue";
+      var blackk =  "#000000";
+      var whitee =  "#FFFFFF";
+      var grayy = "#8e8e8e";
+      var lightgrayy = "#A9A9A9";
+      var purple1 = "#2e1a4b";
+      var purple2 = "#5e266d";
+      var green1 =  "#093d20";
+      var green2 =  "#046b37";
+      var yellow1 = "#ffb71d";
+      var yellow2 = "#ffd133";
+      var secondary = "";
+      var tittlee = "C5C5C5"
+
+      var textt = "#FFF";
+      var dark1 = "#243447";
+      var dark1light = "#2d4058";
+      var dark2 = "#3e597a";
+      //Default color of page
+      document.body.style.backgroundColor = blackk;
+      //Footer
+      document.getElementsByClassName("full-page")[0].style.backgroundColor = dark2;
+      document.getElementsByClassName("footerText")[0].style.color = textt;
+      //ADA onclick Popup
+      document.getElementsByClassName("popuptext")[0].style.backgroundColor = dark2;
+      //ADA popup title text
+      document.getElementsByClassName("ADA")[0].style.backgroundColor = dark2;
+      document.getElementsByClassName("ADA")[1].style.backgroundColor = dark2;
+      //ADA popup subtext
+      document.getElementsByClassName("popuptext")[0].style.color = textt;
+      document.getElementsByClassName("popuptext")[0].style.color = textt;
+      document.getElementsByClassName("popuptext")[0].style.color = textt;
+      //Navbar sub text
+      document.getElementsByClassName("lambda-nav")[0].style.backgroundColor = dark1light
+      //Navbar Our Chapter & stay COnnected links
+      document.getElementsByClassName("dropbtn")[0].style.color = textt;
+      document.getElementsByClassName("dropbtn")[0].style.backgroundColor = dark1light;
+      document.getElementsByClassName("dropbtn")[1].style.color = textt;
+      document.getElementsByClassName("dropbtn")[1].style.backgroundColor = dark1light;
+      document.getElementsByClassName("dropbtn")[2].style.color = textt;
+      document.getElementsByClassName("dropbtn")[2].style.backgroundColor = dark1light;
+      //Navbar Dropdown links
+      document.getElementsByClassName("tlink")[0].style.color = textt;
+      document.getElementsByClassName("tlink")[1].style.color = textt;
+      document.getElementsByClassName("tlink")[2].style.color = textt;
+      document.getElementsByClassName("tlink")[3].style.color = textt;
+      document.getElementsByClassName("tlink")[4].style.color = textt;
+      document.getElementsByClassName("tlink")[5].style.color = textt;
+      document.getElementsByClassName("tlink")[0].style.backgroundColor = dark2;
+      document.getElementsByClassName("tlink")[1].style.backgroundColor = dark2;
+      document.getElementsByClassName("tlink")[2].style.backgroundColor = dark2;
+      document.getElementsByClassName("tlink")[3].style.backgroundColor = dark2;
+      document.getElementsByClassName("tlink")[4].style.backgroundColor = dark2;
+      document.getElementsByClassName("tlink")[5].style.backgroundColor = dark2;
+      try {
+        //Google Calendar Text
+        document.getElementsByClassName("calendar")[0].style.color = textt;
+        //Home Page Text
+        document.getElementsByClassName("welcome")[0].style.color = textt;
+        document.getElementsByClassName("welcomee")[0].style.color = textt;
+        document.getElementsByClassName("welcomee")[1].style.color = textt;
+        //Home Page Top Background
+        document.getElementsByClassName("welcome")[0].style.backgroundColor = dark1;
+        //Home Page Bottom Background
+        document.getElementsByClassName("activities")[0].style.backgroundColor = dark1light;
+        //Home Page "Chapter Updates" title
+        document.getElementsByClassName("testtt")[0].style.color = textt;
+        //BlogArea surronding Background color
+        document.getElementsByClassName("blogareaa")[0].style.backgroundColor = dark1light;
+        //BlogArea background color
+        document.getElementsByClassName("blogarea")[0].style.backgroundColor = dark2;
+        document.getElementsByClassName("blogarea")[0].style.color = textt;
+        document.getElementsByClassName("blogarea")[1].style.backgroundColor = dark2;
+        document.getElementsByClassName("blogarea")[1].style.color = textt;
+        document.getElementsByClassName("blogarea")[1].style.backgroundColor = dark2;
+        document.getElementsByClassName("blogarea")[2].style.color = textt;
+        document.getElementsByClassName("blogarea")[2].style.backgroundColor = dark2;
+      } catch (e) {}
+      try {
+        document.getElementsByClassName("about-us")[0].style.backgroundColor = dark1;
+        document.getElementsByClassName("about-us")[0].style.color = textt;
+      } catch (e) { }
+      try {
+        document.getElementsByClassName("bro-list")[0].style.backgroundColor = dark1;
+        document.getElementsByClassName("container-fluid")[0].style.backgroundColor = dark1light;
+        document.getElementsByClassName("container-fluid")[0].style.color = textt;
+        document.getElementsByClassName("titleee")[0].style.color = textt;
+      } catch (e) { }
+      try {
+        document.getElementsByClassName("scholarship")[0].style.backgroundColor = dark1;
+        document.getElementsByClassName("scholarship")[0].style.color = textt;
+        document.getElementsByClassName("titleee")[0].style.color = textt;
+      } catch (e) { }
+      try {
+        //Brothers list table header
+        document.getElementsByClassName("tablee")[0].style.backgroundColor = dark2;
+        document.getElementsByClassName("tablee")[0].style.color = textt;
+        document.getElementsByClassName("tablee")[0].style.borderColor = textt;
+
+        //Brothers list table header border
+        document.getElementsByClassName("titlecol")[0].style.borderColor = textt;
+        document.getElementsByClassName("titlecol")[0].style.borderColor = textt;
+        var name = document.getElementsByClassName("Name")
+        var isnum = document.getElementsByClassName("isnum")
+        var Major = document.getElementsByClassName("Major")
+        var Year = document.getElementsByClassName("Year")
+        for (var i = 0, len = name.length; i < len; i++) {
+          name[i].style.backgroundColor = dark2;
+          name[i].style.color = textt;
+          isnum[i].style.backgroundColor = dark2;
+          isnum[i].style.color = textt;
+          Major[i].style.backgroundColor = dark2;
+          Major[i].style.color = textt;
+          Year[i].style.backgroundColor = dark2;
+          Year[i].style.color = textt;
+        }
+      } catch (e) { }
+      try {
+        document.getElementsByClassName("container-fluid")[0].style.backgroundColor = dark2;
+      } catch (e) { }
+      try {
+        //InterestForm
+        //Background
+        document.getElementsByClassName("modal-header")[0].style.backgroundColor = dark1;
+        document.getElementsByClassName("modal-body")[0].style.backgroundColor = dark2;
+        //textcolor
+        document.getElementsByClassName("modal-header")[0].style.color = textt;
+        document.getElementsByClassName("modal-body")[0].style.color = textt;
+        //Submission box background color
+        document.getElementsByClassName("form-control")[0].style.backgroundColor = textt;
+        document.getElementsByClassName("form-control")[1].style.backgroundColor = textt;
+        document.getElementsByClassName("form-control")[2].style.backgroundColor = textt;
+        document.getElementsByClassName("form-control")[0].style.color = textt;
+        document.getElementsByClassName("form-control")[1].style.color = textt;
+        document.getElementsByClassName("form-control")[2].style.color = textt;
+        //Footer
+        document.getElementsByClassName("modal-footer")[0].style.color = textt;
+        document.getElementsByClassName("modal-footer")[0].style.backgroundColor = dark1light;
+        //close&submit button
+        document.getElementsByClassName("btn-primary")[0].style.backgroundColor = dark1light;
+        document.getElementsByClassName("btn-primary")[0].style.color = textt;
+        document.getElementsByClassName("btn-secondary")[0].style.backgroundColor = dark1light;
+        document.getElementsByClassName("btn-secondary")[0].style.color = textt;
+      } catch (e) { }
+    }
+
+    function CheckIfADA() {
+      if (document.getElementById("myCheck1").checked == true) {
+        setTimeout(function () { changeColorSetDarkMode(); }, 10);
+      }
     }
     // When the user clicks on div, open the popup
     function myFunction() {
@@ -64,9 +210,9 @@
       console.log("HI")
       console.log(document.getElementsByClassName("lambda-nav")[0])
       if (document.body.scrollTop > 90 || document.documentElement.scrollTop > 90) {
-        document.getElementsByClassName("lambda-nav")[0].style.borderColor = "red";
+        document.getElementsByClassName("lambda-nav")[0].style.borderColor = blackk;
       } else {
-        document.getElementsByClassName("lambda-nav")[0].style.backgroundcolor = "green";
+        document.getElementsByClassName("lambda-nav")[0].style.backgroundcolor = blackk;
       } 
     }*/
 	</script>

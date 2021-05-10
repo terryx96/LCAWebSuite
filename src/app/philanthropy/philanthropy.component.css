@@ -3,8 +3,6 @@
     background-color: #f3ebdc;
   }
 
-.philanthropy {
-}
 
 img {
     width: 20%;
@@ -13,13 +11,17 @@ img {
 }
 
 .rainpicImg {
-    width: 20%;
+    width: 20vw;
     display: inline-block;
     margin: 0px 30px 0px 0px;
 }
 
+.rainnImg{
+    padding-top:5vh;
+}
+
 .baldgroupImg {
-    max-width: 20%;
+    width: 20vw;
     display: inline-block;
     margin: 0px 30px 0px 0px;
 }

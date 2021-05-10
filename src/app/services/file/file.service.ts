@@ -12,7 +12,7 @@ export class FileService {
 
   private basePath = '/uploads';
   private downloadURL: Observable<string> | undefined;
-  public test: any;
+  public uploadURL: any;
 
   constructor(private db: AngularFireDatabase, private storage: AngularFireStorage) { }
 
@@ -31,7 +31,12 @@ export class FileService {
   
   private saveFileData(fileUpload: FileUpload): void {
     console.log(fileUpload)
+    this.setUploadUrl(fileUpload.url!);
     this.db.list(this.basePath).push(fileUpload);
+  }
+
+  public setUploadUrl(url: string): void {
+    this.uploadURL = url;
   }
 
 
