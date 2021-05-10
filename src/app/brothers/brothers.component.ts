@@ -20,6 +20,7 @@ export class BrothersComponent implements OnInit {
   }
 
   deleteBrother(id: string): void {
+    console.log(id);
     this.dataService.delete(id);
   }
 
