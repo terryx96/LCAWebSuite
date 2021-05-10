@@ -8,8 +8,7 @@
 		<th class="title">Year</th>
 	</tr>
 	<tr *ngFor="let brother of brothers; let i = index" class="all">
-		<th class="Pict"><img src="../../assets/BrothersPict/image{{i}}.png" /></th>
-		
+		<th class="Pict"><img src = "{{brother.url}}"/></th>
 		<th class="Name"> <h3>{{brother.name}}</h3></th>
 		<th class="isnum"> <h3>{{brother.isnum}}</h3></th>
 		<th class="Major"> {{brother.majors}} </th><!--MAJOR-->
