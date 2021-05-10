@@ -23,6 +23,8 @@ export class AddBrotherComponent implements OnInit {
   
   saveBrother(): void {
     this.dataService.setDbPath("/brothers");
+    this.brother.url = this.fileService.uploadURL;
+    console.log(this.brother)
     this.dataService.create(this.brother);
   }
 
@@ -30,7 +32,6 @@ export class AddBrotherComponent implements OnInit {
      const file = event.target.files[0];
      this.photoUpload = new FileUpload(file);
      this.fileService.upload(this.photoUpload);
-
   }
 
 }
