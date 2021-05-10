@@ -40,6 +40,10 @@ export class HomeComponent implements OnInit {
     plugins: [ googleCalendarPlugin, dayGridPlugin, timeGridPlugin, listGridPlugin ],
     initialView: 'listWeek',   
     height: '600px', 
+    titleFormat: { // will produce something like "Tuesday, September 18, 2018"
+      month: 'short',
+      day: 'numeric',
+    },
     events: {
       googleCalendarId: environment.calendarConfig.calendarID,
       color: 'purple',   // an option!
