@@ -1,7 +1,8 @@
 button.add {
 	background-color: white;
     color: black;
-    border: 2px solid #4CAF50; /* Green */
+    border: 2px solid #093d20; /* Green */
+    font-family:interreg;
 }
 
 fieldset {
@@ -16,6 +17,20 @@ fieldset {
   border: 1px dotted;
 }
 
+.bro-list{
+  background-color:white;
+}
+
+@font-face {
+  font-family: interreg;
+  src: url(Inter-Regular.ttf);
+}
+
+@font-face {
+  font-family: interbold;
+  src: url(Inter-Bold.ttf);
+}
+
 img {
   width: 50%;
   margin-left: 20%;
@@ -25,13 +40,21 @@ img {
 .container-fluid {
   padding-top: 8em;
   background-color: #f3ebdc;
+  color: #093d20;
 }
 
 p {
   margin-right: 20%;
+  font-family:interreg;
+  
 }
 
-.bro-list {
-  background-color: #F3F3F3;
-  padding-bottom: 4em;
+.h6, h1{
+  font-family:interreg;
+  color:#093d20;
+}
+
+hr {
+  max-width: 75%;
+  margin-left: 0px;
 }

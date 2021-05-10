@@ -10,9 +10,18 @@ h1 {
     color: #093D20;    
 }
 
+hr {
+    width: 80%;
+    margin-left: 50px
+}
+
 p {
     margin-left: 50px;
     margin-right: 30px;
+}
+
+.scholarrep {
+    text-align: center;
 }
 
 .scholarImg {

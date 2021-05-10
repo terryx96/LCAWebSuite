@@ -22,9 +22,12 @@ p {
 }
 
 h1 {
-    text-align: center;
     margin: auto;
-    padding-bottom: 1em;
+}
+
+hr {
+    max-width: 80%;
+    margin-left: 0px;
 }
 
 .badgeImg {

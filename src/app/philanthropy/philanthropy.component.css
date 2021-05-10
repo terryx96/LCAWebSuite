@@ -3,13 +3,32 @@
     background-color: #f3ebdc;
   }
 
-.philanthropy {
-}
 
 img {
     width: 20%;
     margin: auto;
+    display: block;
+}
+
+.rainpicImg {
+    width: 20vw;
     display: inline-block;
+    margin: 0px 30px 0px 0px;
+}
+
+.rainnImg{
+    padding-top:5vh;
+}
+
+.baldgroupImg {
+    width: 20vw;
+    display: inline-block;
+    margin: 0px 30px 0px 0px;
+}
+
+.side p {
+    margin-left: 0px;
+    margin-right: 8em;
 }
 
 p {

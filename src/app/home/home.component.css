@@ -37,7 +37,6 @@ button.add {
 
 .studImg {
   height: 50vh;
-  width: auto;
   margin: auto;    
   display: block;
 }
@@ -62,7 +61,7 @@ button.add {
 
 .welcome img {
   padding-top: 2em;
-  width: 30em;
+  height: 40vh;
 }
 
 .welcome p {
@@ -92,12 +91,13 @@ fieldset {
   padding-right: 0.75em;
   border: 1px dotted;
 }
-ul {
+.blogareaa {
     background-color: #F3F3F3;
+    padding-left: 0vw;
 }
 
 div.blogarea {
-  max-width: 70%;
+  max-width: 50vw;
   border: 1px solid black;
   padding: 10px;
   background-color: #f3ebdc;
@@ -117,4 +117,11 @@ sub {
   color: B7B7B7;
   opacity: .5;
   font-size: 75%;
+}
+.col-4{
+  max-width:40vw;
+}
+
+.col-8{
+  max-width:60vw;
 }
