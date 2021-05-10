@@ -3,34 +3,49 @@ table {
   text-align: center;
   margin: auto;
   color: #000;
-  
 }
-  table tr:not(:first-child) {
-    border-bottom-style: solid;
-    border-bottom-color: #000;
-    border-bottom-width: 1px;
-  }
-  table tr th {
-    min-width: 10vw;
-  }
+table tr:not(:first-child) {
+  border-bottom-style: solid;
+  border-bottom-color: #000;
+  border-bottom-width: 1px;
+}
+table tr th {
+  min-width: 10vw;
+}
 
-table tr th.Pict img{
-    max-width: 200px;
-    max-height: 275px;
+table tr th.Pict img {
+  max-width: 200px;
+  max-height: 275px;
 }
 table tr th.Name {
-    background-color: #f3ebdc;
-  }
-  table tr th.Major {
-    background-color: #f3ebdc;
-  }
-  table tr th.Year {
-    background-color: #f3ebdc;
-  }
+  background-color: #f3ebdc;
+}
+table tr th.Major {
+  background-color: #f3ebdc;
+}
+table tr th.Year {
+  background-color: #f3ebdc;
+}
 
-  .title {
-    background-color: #ffffff;
+.title {
+  background-color: #ffffff;
+}
 
-  }
+div.brotherContainer {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15pt;
+  padding: 2em;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+}
 
-  
+img.pict {
+  width: 13em;
+  height: 13em;
+}
+
+div.imageContainer {
+  width: 13em;
+  height: 13em;
+}

@@ -1,4 +1,4 @@
-<br>
+<!-- <br>
 <table>
 	<tr>
 		<th class="title"></th>
@@ -11,8 +11,19 @@
 		<th class="Pict"><img src = "{{brother.url}}"/></th>
 		<th class="Name"> <h3>{{brother.name}}</h3></th>
 		<th class="isnum"> <h3>{{brother.isnum}}</h3></th>
-		<th class="Major"> {{brother.majors}} </th><!--MAJOR-->
+		<th class="Major"> {{brother.majors}} </th>
 		<th class="Year">Class of {{brother.year}}</th>
 	</tr>
-</table>
+</table> -->
 
+<div class = "row justify-content-md-center">
+	<div *ngFor="let brother of brothers" class = "brotherContainer col-3-md">
+		<div class = "imageContainer">
+			<img class = "pict rounded-circle border border-dark" src = "{{brother.url}}">
+		</div>
+		<br>
+		<h2 class = "Name">{{brother.name}}</h2>
+		<h4>{{brother.majors}}</h4>
+
+	</div>
+</div>
