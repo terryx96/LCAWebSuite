@@ -13,6 +13,7 @@ export class BrothersListComponent implements OnInit {
   brothers: Brother[] = [];
   currentBrother: Brother = new Brother();
   indexSelected: number = -1;
+  signedIn: string = localStorage.getItem("cookieLog")!;
 
   constructor(private dataService: DataService) { }
 

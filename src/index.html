@@ -49,6 +49,10 @@
       counter = 1;
       var blackk =  "#000000";
 
+      //Footer bottom
+      try { document.getElementsByTagName("body")[0].style.backgroundColor = dark2; } catch (e) { }
+      try { document.getElementsByTagName("body")[1].style.backgroundColor = dark2; } catch (e) { }
+
       //Default color of page
       try { document.body.style.backgroundColor = blackk; } catch (e) { }
       //Footer
@@ -127,15 +131,15 @@
         var isnum = document.getElementsByClassName("isnum")
         var Major = document.getElementsByClassName("Major")
         var Year = document.getElementsByClassName("Year")
-        for (var i = 0, len = name.length; i < len; i++) {
+        for (var i = 0; i < name.length; i++) {
           name[i].style.backgroundColor = dark2;
           name[i].style.color = textt;
-          isnum[i].style.backgroundColor = dark2;
-          isnum[i].style.color = textt;
+         // isnum[i].style.backgroundColor = dark2;
+         // isnum[i].style.color = textt;
           Major[i].style.backgroundColor = dark2;
           Major[i].style.color = textt;
-          Year[i].style.backgroundColor = dark2;
-          Year[i].style.color = textt;
+         // Year[i].style.backgroundColor = dark2;
+         // Year[i].style.color = textt;
         }
       } catch (e) {}
       try {

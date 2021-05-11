@@ -25,14 +25,16 @@
 			<br>
 			<input placeholder="Zeta" [(ngModel)] = "currentBrother.zeta" value = "{{brother.zeta}}" />
 			<br>
-			<button (click) = "updateBrother(currentBrother.key!)">Save</button>
-			<button (click) = "closeEditForm()">Cancel</button>
+			
+			<button  (click) = "closeEditForm()">Cancel</button>
+			<button  (click) = "updateBrother(currentBrother.key!)">Save</button>
+			
 
 		</div>
-
+		<div *ngIf="signedIn=='true'">
 		<button (click) = "deleteBrother(brother.key!)"><i class="fas fa-trash"></i></button>
 		<button (click) = "openEditForm(i)"><i class="fas fa-pen"></i></button>
-
+		</div>
 
 	</div>
 </div>

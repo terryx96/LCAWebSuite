@@ -33,7 +33,12 @@
         <a onclick="CheckIfADA()" class="tlink" routerLink="/donations">Donations </a>
       </div>
     </div>
+    
+    <div *ngIf="signedIn=='true'" class="dropdown">
+      <button class="dropbtn" routerLink="/admin">Admin</button>
+    </div>
+
+
   </div>
 </nav>
 </div>
-
