@@ -13,6 +13,7 @@ export class BrothersListComponent implements OnInit {
   brothers: Brother[] = [];
   currentBrother: Brother = new Brother();
   editMode: boolean = false; 
+  indexSelected: number = -1;
 
   constructor(private dataService: DataService) { }
 
@@ -40,13 +41,17 @@ export class BrothersListComponent implements OnInit {
   }
 
   updateBrother = (key: string) => {
-    console.log("update brother ran")
+    this.dataService.update(key, this.currentBrother);
+    this.closeEditForm()
   }
 
-  openEditForm = (key: string) => {
-    this.editMode = true;
-    this.currentBrother.key = key;
-    
+  openEditForm = (index: number) => {
+    this.indexSelected = index; 
+    this.currentBrother = this.brothers[index];
+  }
+
+  closeEditForm = () => {
+    this.indexSelected = -1;
   }
 
 }

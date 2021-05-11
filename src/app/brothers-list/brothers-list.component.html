@@ -1,5 +1,5 @@
 <div class = "row justify-content-md-center">
-	<div *ngFor="let brother of brothers" class = "brotherContainer col-3-md">
+	<div *ngFor="let brother of brothers; let i = index" class = "brotherContainer col-3-md">
 		<div class = "imageContainer">
 			<img class = "pict rounded-circle border border-dark hover-highlight" src = "{{brother.url}}">
 		</div>
@@ -12,15 +12,26 @@
 		</div>
 
 		<!-- Edit form -->
-		<div *ngIf = "editMode">
-			<input *ngIf="editMode" value = "{{brother.name}}" />
+		<div *ngIf = "i == indexSelected">
+			<input [(ngModel)] = "currentBrother.name" />
 			<br>
-			<input *ngIf="editMode" value = "{{brother.majors}}" />
+			<input [(ngModel)] = "currentBrother.majors" />
 			<br>
+			<input [(ngModel)] = "currentBrother.isnum" value = "{{brother.isnum}}" />
+			<br>
+			<input [(ngModel)] = "currentBrother.year" value = "{{brother.year}}" />
+			<br>
+			<input [(ngModel)] = "currentBrother.minors" value = "{{brother.minors}}" />
+			<br>
+			<input [(ngModel)] = "currentBrother.zeta" value = "{{brother.zeta}}" />
+			<br>
+			<button (click) = "updateBrother(currentBrother.key!)">Save</button>
+			<button (click) = "closeEditForm()">Cancel</button>
+
 		</div>
 
 		<button (click) = "deleteBrother(brother.key!)"><i class="fas fa-trash"></i></button>
-		<button (click) = "openEditForm(brother.key!)"><i class="fas fa-pen"></i></button>
+		<button (click) = "openEditForm(i)"><i class="fas fa-pen"></i></button>
 
 
 	</div>
