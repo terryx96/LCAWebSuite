@@ -38,9 +38,8 @@ export class BrothersListComponent implements OnInit {
   }
 
   updateBrother = (key: string) => {
-
     let data = this.openEditForm();
-
+    
     this.dataService.update(key, data);
   }
 
