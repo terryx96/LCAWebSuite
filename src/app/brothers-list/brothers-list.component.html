@@ -13,17 +13,17 @@
 
 		<!-- Edit form -->
 		<div *ngIf = "i == indexSelected">
-			<input [(ngModel)] = "currentBrother.name" />
+			<input placeholder="Name" [(ngModel)] = "currentBrother.name" />
 			<br>
-			<input [(ngModel)] = "currentBrother.majors" />
+			<input placeholder="Majors" [(ngModel)] = "currentBrother.majors" />
 			<br>
-			<input [(ngModel)] = "currentBrother.isnum" value = "{{brother.isnum}}" />
+			<input placeholder="Iota Sigma Number" [(ngModel)] = "currentBrother.isnum" value = "{{brother.isnum}}" />
 			<br>
-			<input [(ngModel)] = "currentBrother.year" value = "{{brother.year}}" />
+			<input placeholder="Year" [(ngModel)] = "currentBrother.year" value = "{{brother.year}}" />
 			<br>
-			<input [(ngModel)] = "currentBrother.minors" value = "{{brother.minors}}" />
+			<input placeholder="Minors" [(ngModel)] = "currentBrother.minors" value = "{{brother.minors}}" />
 			<br>
-			<input [(ngModel)] = "currentBrother.zeta" value = "{{brother.zeta}}" />
+			<input placeholder="Zeta" [(ngModel)] = "currentBrother.zeta" value = "{{brother.zeta}}" />
 			<br>
 			<button (click) = "updateBrother(currentBrother.key!)">Save</button>
 			<button (click) = "closeEditForm()">Cancel</button>
