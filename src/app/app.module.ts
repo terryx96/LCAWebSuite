@@ -38,9 +38,6 @@ import { AddBlogpostComponent } from './add-blogpost/add-blogpost.component';
 import { AddUploadComponent } from './add-upload/add-upload.component';
 import { NewslettersListComponent } from './newsletters-list/newsletters-list.component';
 import { PdfComponentComponent } from './pdf-component/pdf-component.component';
-import { RemoveBlogpostComponent } from './remove-blogpost/remove-blogpost.component';
-import { RemoveBrothersComponent } from './remove-brothers/remove-brothers.component';
-import { UpdateBrotherComponent } from './update-brother/update-brother.component';
 
 @NgModule({
   declarations: [
@@ -62,10 +59,7 @@ import { UpdateBrotherComponent } from './update-brother/update-brother.componen
     AddBlogpostComponent,
     AddUploadComponent,
     NewslettersListComponent,
-    PdfComponentComponent,
-    RemoveBlogpostComponent,
-    RemoveBrothersComponent,
-    UpdateBrotherComponent
+    PdfComponentComponent
   ],
   imports: [
   BrowserModule,
