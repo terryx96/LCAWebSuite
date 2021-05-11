@@ -11,5 +11,4 @@ export class InterestComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
