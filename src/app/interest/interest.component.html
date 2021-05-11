@@ -9,22 +9,30 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form id="int-form" action="https://formcarry.com/s/19Zcfp43_ap" method="POST" accept-charset="UTF-8">
+					<form action="https://formcarry.com/s/87xtJtW3if5" method="POST" accept-charset="UTF-8" >
+
 						<div class="form-group">
-							<label for="full-name" class="col-form-label">Name</label>
-							<input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last">
-							<label for="email-address" class="col-form-label">Email Address</label>
-							<input type="email" name="_replyto" class="form-control" placeholder="Your email" id="email-address">
-							<label for="message" class="col-form-label">What interests do you have regarding Lambda Chi?</label>
-							<textarea rows="5" name="message" class="form-control" placeholder="Your message" id="message"></textarea>
+
+							<label class="col-form-label">Name</label>
+							<input type="text" name="_name" class="form-control" placeholder="First and Last">
+
+							<label class="col-form-label">Email Address</label>
+							<input type="email" name="_replyto" class="form-control" placeholder="Your email">
+
+							<label class="col-form-label">What interests do you have regarding Lambda Chi?</label>
+							<textarea type="text" rows="5" name="_message" class="form-control" placeholder="Your message"></textarea>
+
+							<input type="hidden" name="_subject" id="email-subject" value="LCA interest from website">
+							<input type="hidden" name="_gotcha">
+
 						</div>
-						<input type="hidden" name="_subject" id="email-subject" value="LCA interest from website">
 						<div class="modal-footer">
 							<a>We will reach out soon!</a>
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="submit" form="int-form" class="btn btn-primary">Submit</button>
-						</div>
+							<button type="submit" data-dismiss="modal" class="btn btn-primary">Send</button>
+						</div> 
 					</form>
+					
 				</div>
 			</div>
 		</div>
