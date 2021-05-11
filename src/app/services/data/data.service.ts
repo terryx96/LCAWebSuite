@@ -46,4 +46,8 @@ export class DataService {
     this.tableRef.remove(id);
   }
 
+  update = (key: string, data: Entry) => {
+    this.tableRef.update(key, data);
+  }
+
 }

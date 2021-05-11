@@ -3,10 +3,11 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\philanthropy",
-    "\\src\\app\\scholarship",
+    "\\src\\app\\interest",
+    "\\src\\app\\remove-blogpost",
+    "\\src\\app\\remove-brothers",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\philanthropy\\philanthropy.component.css",
+  "SelectedNode": "\\src\\app\\app.component.html",
   "PreviewInSolutionExplorer": false
 }
