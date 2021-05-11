@@ -1,12 +1,38 @@
 <div class = "row justify-content-md-center">
-	<div *ngFor="let brother of brothers" class = "brotherContainer col-3-md">
+	<div *ngFor="let brother of brothers; let i = index" class = "brotherContainer col-3-md">
 		<div class = "imageContainer">
 			<img class = "pict rounded-circle border border-dark hover-highlight" src = "{{brother.url}}">
 		</div>
 		<br>
-		<h2 class = "Name">{{brother.name}}</h2>
-		<h4>{{brother.majors}}</h4>
+
+		<!-- Non editing display -->
+		<div>
+			<h2 class = "Name">{{brother.name}}</h2>
+			<h4 class = "Name">{{brother.majors}}</h4>
+		</div>
+
+		<!-- Edit form -->
+		<div *ngIf = "i == indexSelected">
+			<input placeholder="Name" [(ngModel)] = "currentBrother.name" />
+			<br>
+			<input placeholder="Majors" [(ngModel)] = "currentBrother.majors" />
+			<br>
+			<input placeholder="Iota Sigma Number" [(ngModel)] = "currentBrother.isnum" value = "{{brother.isnum}}" />
+			<br>
+			<input placeholder="Year" [(ngModel)] = "currentBrother.year" value = "{{brother.year}}" />
+			<br>
+			<input placeholder="Minors" [(ngModel)] = "currentBrother.minors" value = "{{brother.minors}}" />
+			<br>
+			<input placeholder="Zeta" [(ngModel)] = "currentBrother.zeta" value = "{{brother.zeta}}" />
+			<br>
+			<button (click) = "updateBrother(currentBrother.key!)">Save</button>
+			<button (click) = "closeEditForm()">Cancel</button>
+
+		</div>
+
 		<button (click) = "deleteBrother(brother.key!)"><i class="fas fa-trash"></i></button>
+		<button (click) = "openEditForm(i)"><i class="fas fa-pen"></i></button>
+
 
 	</div>
 </div>
