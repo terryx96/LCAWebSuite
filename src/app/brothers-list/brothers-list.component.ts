@@ -37,4 +37,14 @@ export class BrothersListComponent implements OnInit {
     this.dataService.delete(key);
   }
 
+  updateBrother = (key: string) => {
+    let data = this.openEditForm();
+    
+    this.dataService.update(key, data);
+  }
+
+  openEditForm = () => {
+    return new Brother();
+  }
+
 }
