@@ -12,17 +12,15 @@
 			<router-outlet></router-outlet>
 			<div class="popup" onclick="myFunction()">
 				<img class="PostImage" src="https://www.sf.k12.sd.us/images/gallery/logos/ADA_Icon.png" alt="alternatetext">
-					<span class="popuptext" id="myPopup">
-						<div onclick="newFunction()" id="google_translate_element"></div> <br>
+				<span class="popuptext" id="myPopup">
+					<div onclick="newFunction()" id="google_translate_element"></div> <br>
 					<p class="ADA">ColorBlind</p>
-						<p><input type="radio" name="browser" id="myCheck0" onclick="changeColorSetRegular()">Regular</p>
-						<p><input type="radio" name="browser" id="myCheck1" onclick="changeColorSetDarkMode()">DarkMode</p>
-						<p><input type="radio" name="browser" onclick="check(this.value)">Deuteranopia</p>
-						<p><input type="radio" name="browser" onclick="check(this.value)">Tritanopia</p><br>
+					<p><input type="radio" name="browser" id="myCheck0" onclick="changeColorSetDarkMode('','','','')">Regular</p>
+					<p><input type="radio" name="browser" id="myCheck1" onclick="changeColorSetDarkMode('#FFF','#243447','#2d4058','#3e597a')">DarkMode</p>
 					<p class="ADA">Text Size</p>
-						<p><input type="radio" name="fontSize" onclick="changeFontSize('text', 100)"> Small</p>
-						<p><input type="radio" name="fontSize" onclick="changeFontSize('text', 120)"> Medium</p>
-						<p><input type="radio" name="fontSize" onclick="changeFontSize('text', 140)"> Large</p><br>
+					<p><input type="radio" name="fontSize" onclick="changeFontSize('text', 100)"> Small</p>
+					<p><input type="radio" name="fontSize" onclick="changeFontSize('text', 120)"> Medium</p>
+					<p><input type="radio" name="fontSize" onclick="changeFontSize('text', 140)"> Large</p><br>
 				</span>
 			</div>
 

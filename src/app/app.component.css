@@ -6,7 +6,10 @@ html, body {
   width: 100%; 
   height: 100%; 
 
-} 
+}
+p.ADA {
+  font-size: 1.4em;
+}
 
 body {  
   margin: 0; 

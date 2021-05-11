@@ -44,30 +44,16 @@
       txt = document.getElementById('text');
       txt.style.color = "";
     }
-    function changeColorSetDarkMode() {
+    function changeColorSetDarkMode(textt, dark1, dark1light, dark2) {
       counter = 1;
       var blackk =  "#000000";
-      var whitee =  "#FFFFFF";
-      var grayy = "#8e8e8e";
-      var lightgrayy = "#A9A9A9";
-      var purple1 = "#2e1a4b";
-      var purple2 = "#5e266d";
-      var green1 =  "#093d20";
-      var green2 =  "#046b37";
-      var yellow1 = "#ffb71d";
-      var yellow2 = "#ffd133";
-      var secondary = "";
-      var tittlee = "C5C5C5"
 
-      var textt = "#FFF";
-      var dark1 = "#243447";
-      var dark1light = "#2d4058";
-      var dark2 = "#3e597a";
       //Default color of page
       document.body.style.backgroundColor = blackk;
       //Footer
       document.getElementsByClassName("full-page")[0].style.backgroundColor = dark2;
       document.getElementsByClassName("footerText")[0].style.color = textt;
+      document.getElementsByClassName("footer")[0].style.backgroundColor = dark2;
       //ADA onclick Popup
       document.getElementsByClassName("popuptext")[0].style.backgroundColor = dark2;
       //ADA popup title text
