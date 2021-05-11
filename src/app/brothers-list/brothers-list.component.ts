@@ -11,6 +11,8 @@ import { map } from 'rxjs/operators';
 export class BrothersListComponent implements OnInit {
 
   brothers: Brother[] = [];
+  currentBrother: Brother = new Brother();
+  indexSelected: number = -1;
 
   constructor(private dataService: DataService) { }
 
@@ -38,13 +40,17 @@ export class BrothersListComponent implements OnInit {
   }
 
   updateBrother = (key: string) => {
-    let data = this.openEditForm();
-    
-    this.dataService.update(key, data);
+    this.dataService.update(key, this.currentBrother);
+    this.closeEditForm()
   }
 
-  openEditForm = () => {
-    return new Brother();
+  openEditForm = (index: number) => {
+    this.indexSelected = index; 
+    this.currentBrother = this.brothers[index];
+  }
+
+  closeEditForm = () => {
+    this.indexSelected = -1;
   }
 
 }
