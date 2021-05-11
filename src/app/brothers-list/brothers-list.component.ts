@@ -12,7 +12,6 @@ export class BrothersListComponent implements OnInit {
 
   brothers: Brother[] = [];
   currentBrother: Brother = new Brother();
-  editMode: boolean = false; 
   indexSelected: number = -1;
 
   constructor(private dataService: DataService) { }
