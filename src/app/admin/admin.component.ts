@@ -14,6 +14,7 @@ export class AdminComponent implements OnInit {
   }
 
   logout() {
+    localStorage.setItem("cookieLog", "false");
     this.authService.signOut();
   }
 

@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
 
   blogposts: any[] = [];
   dbpath: string = "/blogpost";
+  signedIn: string = localStorage.getItem("cookieLog")!;
 
   constructor(private dataService: DataService) {
     this.dataService.setDbPath(this.dbpath);
@@ -29,6 +30,8 @@ export class HomeComponent implements OnInit {
       this.setBlogposts(blogposts);
     });
   }
+
+
 
   setBlogposts(blogposts: Blogpost[]){
     this.blogposts = blogposts;

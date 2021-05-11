@@ -8,13 +8,13 @@ import { Router } from  "@angular/router";
 })
 
 export class AuthenticationService {
-
   authState: any = null;
   isLoggedIn = false;
 
   constructor(private afAuth: AngularFireAuth, private router: Router) {
-    this.afAuth.authState.subscribe((auth) => {
+    afAuth.authState.subscribe((auth) => {
       this.authState = auth
+      localStorage.setItem('user', JSON.stringify(this.authState));
     });
   }
 
@@ -31,12 +31,20 @@ export class AuthenticationService {
       });
   }
 
-  
+  get authenticated(): boolean {
+     return this.authState !== null;
+  }
 
   signOut(): void {
     firebase.auth().signOut();
+    localStorage.removeItem('user');
     this.router.navigate(['/'])
     this.isLoggedIn = false;
+  }
+
+  bodybot(): void {
+    console.log("HIIIII")
+    localStorage.setItem("cookieLog", "signedout");
   }
 
 }
