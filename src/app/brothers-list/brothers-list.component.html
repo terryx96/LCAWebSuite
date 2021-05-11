@@ -1,11 +1,13 @@
 <div class = "row justify-content-md-center">
 	<div *ngFor="let brother of brothers" class = "brotherContainer col-3-md">
 		<div class = "imageContainer">
-			<img class = "pict rounded-circle border border-dark" src = "{{brother.url}}">
+			<img class = "pict rounded-circle border border-dark hover-highlight" src = "{{brother.url}}">
 		</div>
 		<br>
 		<h2 class = "Name">{{brother.name}}</h2>
 		<h4>{{brother.majors}}</h4>
 		<button (click) = "deleteBrother(brother.key!)">Delete</button>
+		<button (click) = "updateBrother(brother.key!)">Update</button>
+
 	</div>
 </div>

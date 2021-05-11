@@ -40,6 +40,7 @@ import { NewslettersListComponent } from './newsletters-list/newsletters-list.co
 import { PdfComponentComponent } from './pdf-component/pdf-component.component';
 import { RemoveBlogpostComponent } from './remove-blogpost/remove-blogpost.component';
 import { RemoveBrothersComponent } from './remove-brothers/remove-brothers.component';
+import { UpdateBrotherComponent } from './update-brother/update-brother.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { RemoveBrothersComponent } from './remove-brothers/remove-brothers.compo
     NewslettersListComponent,
     PdfComponentComponent,
     RemoveBlogpostComponent,
-    RemoveBrothersComponent
+    RemoveBrothersComponent,
+    UpdateBrotherComponent
   ],
   imports: [
   BrowserModule,
