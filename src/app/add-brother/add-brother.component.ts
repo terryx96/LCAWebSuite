@@ -23,9 +23,14 @@ export class AddBrotherComponent implements OnInit {
   
   saveBrother(): void {
     this.dataService.setDbPath("/brothers");
-    this.brother.url = this.fileService.uploadURL;
+    if (this.fileService.uploadURL) {
+      this.brother.url = this.fileService.uploadURL;
+    } else {
+      this.brother.url = "";
+    }
     console.log(this.brother)
-    this.dataService.create(this.brother);
+    let brother = this.dataService.create(this.brother);
+    console.log(brother)
   }
 
   onPictureUploaded(event: any) {

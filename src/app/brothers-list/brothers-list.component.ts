@@ -23,6 +23,7 @@ export class BrothersListComponent implements OnInit {
     )
     .subscribe((brothers: any[]) => {
       this.setBrothers(brothers);
+      console.log(this.brothers)
     }, (error: any) => {
       console.log(error)
     });
@@ -30,6 +31,10 @@ export class BrothersListComponent implements OnInit {
 
   setBrothers(brothers: Brother[]) {
     this.brothers = brothers;
+  }
+
+  deleteBrother = (key: string) => {
+    this.dataService.delete(key);
   }
 
 }
