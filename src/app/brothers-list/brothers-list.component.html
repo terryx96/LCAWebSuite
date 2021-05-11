@@ -4,9 +4,24 @@
 			<img class = "pict rounded-circle border border-dark hover-highlight" src = "{{brother.url}}">
 		</div>
 		<br>
-		<h2 class = "Name">{{brother.name}}</h2>
-		<h4>{{brother.majors}}</h4>
+
+		<!-- Non editing display -->
+		<div *ngIf = "!editMode">
+			<h2 class = "Name">{{brother.name}}</h2>
+			<h4 class = "Name">{{brother.majors}}</h4>
+		</div>
+
+		<!-- Edit form -->
+		<div *ngIf = "editMode">
+			<input *ngIf="editMode" value = "{{brother.name}}" />
+			<br>
+			<input *ngIf="editMode" value = "{{brother.majors}}" />
+			<br>
+		</div>
+
 		<button (click) = "deleteBrother(brother.key!)"><i class="fas fa-trash"></i></button>
+		<button (click) = "openEditForm(brother.key!)"><i class="fas fa-pen"></i></button>
+
 
 	</div>
 </div>
