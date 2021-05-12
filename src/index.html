@@ -27,17 +27,99 @@
     //Change font size with id "text"
     function changeFontSize(id, increaseFactor) {
       counter = 1;
-      txt = document.getElementsByTagName("P");
-      for (var i = 0; i < txt.length; i++) {
-        style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
-        txt[i].style.fontSize = increaseFactor + '%';
-      }
-      txt = document.getElementsByTagName("H1");
-      for (var i = 0; i < txt.length; i++) {
-        style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
-        txt[i].style.fontSize = increaseFactor + '%';
-      }
+      try {
+        txt = document.getElementsByTagName("p");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("H1");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("H4");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("H5");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("H6");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("H3");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("sub");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("h2");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("label");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("input");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("textarea");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("a");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
+      try {
+        txt = document.getElementsByTagName("button");
+        for (var i = 0; i < txt.length; i++) {
+          style = window.getComputedStyle(txt[i], null).getPropertyValue('font-size');
+          txt[i].style.fontSize = increaseFactor + '%';
+        }
+      } catch (e) { }
     }
+
     //Change color set (colorblind)
     function changeColorSetRegular() {
       counter = 1;
