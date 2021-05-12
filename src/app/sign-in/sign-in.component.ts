@@ -22,6 +22,7 @@ export class SignInComponent implements OnInit {
   this.authService.loginWithEmail(this.email, this.password)
         .then(() => {
           this.router.navigate(['/admin']);
+          localStorage.setItem("cookieLog", "true");
           console.log("Sign in successful");
         })
         .catch(_error => {
