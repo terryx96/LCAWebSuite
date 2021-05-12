@@ -127,22 +127,6 @@
       try { document.getElementsByClassName("titlecol")[0].style.borderColor = textt; } catch (e) { }
       try { document.getElementsByClassName("titlecol")[0].style.borderColor = textt; } catch (e) { }
       try {
-        var name = document.getElementsByClassName("Name")
-        var isnum = document.getElementsByClassName("isnum")
-        var Major = document.getElementsByClassName("Major")
-        var Year = document.getElementsByClassName("Year")
-        for (var i = 0; i < name.length; i++) {
-          name[i].style.backgroundColor = dark2;
-          name[i].style.color = textt;
-         // isnum[i].style.backgroundColor = dark2;
-         // isnum[i].style.color = textt;
-          Major[i].style.backgroundColor = dark2;
-          Major[i].style.color = textt;
-         // Year[i].style.backgroundColor = dark2;
-         // Year[i].style.color = textt;
-        }
-      } catch (e) {}
-      try {
         document.getElementsByClassName("container-fluid")[0].style.backgroundColor = dark2;
       } catch (e) {}
         //InterestForm
@@ -169,6 +153,14 @@
       try { document.getElementsByClassName("btn-secondary")[0].style.color = textt; } catch (e) { }
       try { document.getElementsByClassName("bro-list")[0].style.backgroundColor = dark1; } catch (e) { }
       try { document.getElementsByClassName("titleee")[0].style.color = textt; } catch (e) { }
+      try {
+        for (i = 0; i < document.getElementsByClassName("Major").length; i++) {
+          document.getElementsByClassName("brotherElement")[i].style.backgroundColor = dark1light;
+          document.getElementsByClassName("Name")[i].style.color = textt;
+          document.getElementsByClassName("Major")[i].style.color = textt;
+          document.getElementsByClassName("Year")[i].style.color = textt;
+        }
+      } catch (e) { }
     }
 
     function CheckIfADA() {
