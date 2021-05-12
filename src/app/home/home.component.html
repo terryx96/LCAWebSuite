@@ -33,10 +33,30 @@
 			<div class="col-8">
 				<ul class="blogareaa">
 					<br />
-					<div class="blogarea" *ngFor="let blogpost of blogposts">
+					<div class="blogarea" *ngFor="let blogpost of blogposts; let i = index">
 						<h5>{{blogpost.title}}</h5>
 						<p>{{blogpost.body}}</p>
 						<sub>{{blogpost.date}}</sub>
+
+						<!-- Edit form -->
+						<div *ngIf = "i == indexSelected">
+							<input placeholder="Title" [(ngModel)] = "selectedBlogpost.title" />
+							<br>
+							<textarea placeholder="Body" [(ngModel)] = "selectedBlogpost.body" ></textarea>
+							<br>
+							<input placeholder="Date" [(ngModel)] = "selectedBlogpost.date" />
+							<br>
+							<button  (click) = "closeEditForm()">Cancel</button>
+							<button  (click) = "updateBlogpost(selectedBlogpost.key!)">Save</button>
+
+						</div>
+					
+						<!-- Edit Form Save/Cancel Buttons-->
+						<div *ngIf="signedIn=='true'">
+							<button (click) = "deleteBlogpost(blogpost.key!)"><i class="fas fa-trash"></i></button>
+							<button (click) = openEditForm(i)><i class="fas fa-pen"></i></button>
+						</div>
+
 					</div>
 					<br />
 				</ul>
