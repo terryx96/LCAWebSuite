@@ -20,6 +20,8 @@ export class HomeComponent implements OnInit {
   blogposts: any[] = [];
   dbpath: string = "/blogpost";
   signedIn: string = localStorage.getItem("cookieLog")!;
+  selectedBlogpost: Blogpost = new Blogpost();
+  indexSelected: number = -1;
 
   constructor(private dataService: DataService) {
     this.dataService.setDbPath(this.dbpath);
@@ -40,7 +42,14 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  openEditForm = (index: number) => {
+    this.indexSelected = index;
+    this.selectedBlogpost = this.blogposts[index];
+  }
 
+  closeEditForm = () => {
+    this.indexSelected = -1;
+  }
 
   setBlogposts(blogposts: Blogpost[]){
     this.blogposts = blogposts;
@@ -48,6 +57,11 @@ export class HomeComponent implements OnInit {
 
   deleteBlogpost = (key: string) => {
     this.dataService.delete(key);
+  }
+
+  updateBlogpost = (key: string) => {
+    this.dataService.update(key, this.selectedBlogpost);
+    this.closeEditForm();
   }
 
   calendarOptions: CalendarOptions = {
