@@ -43,6 +43,10 @@ export class HomeComponent implements OnInit {
     this.blogposts = blogposts;
   }
 
+  deleteBlogpost = (key: string) => {
+    this.dataService.delete(key);
+  }
+
   calendarOptions: CalendarOptions = {
     // Single Calendar
     googleCalendarApiKey: environment.calendarConfig.apiKey,
