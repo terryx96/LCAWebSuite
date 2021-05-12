@@ -8,6 +8,7 @@ import timeGridPlugin from '@fullcalendar/timegrid'; // a plugin
 import listGridPlugin from '@fullcalendar/list'; // a plugin
 import interactionPlugin from '@fullcalendar/interaction'; // a plugin
 import { environment } from '../../environments/environment';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -24,9 +25,17 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.dataService.getAll().valueChanges()
-    .subscribe((blogposts: any) => {
+    this.dataService.getAll().snapshotChanges().pipe(
+      map((changes: any) => 
+        changes.map((c: any) => 
+          ({ key: c.payload.key, ...c.payload.val() })
+        ))
+    )
+    .subscribe((blogposts: any[]) => {
       this.setBlogposts(blogposts);
+      console.log(this.blogposts)
+    }, (error: any) => {
+      console.log(error)
     });
   }
 
